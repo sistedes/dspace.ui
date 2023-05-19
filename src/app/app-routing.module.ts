@@ -41,6 +41,11 @@ import { ServerCheckGuard } from './core/server-check/server-check.guard';
 import { MenuResolver } from './menu.resolver';
 import { ThemedPageErrorComponent } from './page-error/themed-page-error.component';
 
+// BEGIN Sistedes
+import { SistedesRoutingModule } from 'src/themes/sistedes/app/sistedes-routing.module';
+import { SistedesMenuResolver } from 'src/themes/sistedes/app/sistedes-menu.resolver';
+// END Sistedes
+
 @NgModule({
   imports: [
     RouterModule.forRoot([
@@ -50,8 +55,17 @@ import { ThemedPageErrorComponent } from './page-error/themed-page-error.compone
         path: '',
         canActivate: [AuthBlockingGuard],
         canActivateChild: [ServerCheckGuard],
-        resolve: [MenuResolver],
-        children: [
+        resolve: [MenuResolver,
+          // BEGIN Sistedes
+           SistedesMenuResolver
+          // END Sistedes
+        ],
+        children: 
+          // BEGIN Sistedes
+          SistedesRoutingModule.ROUTES.concat(
+          // BEWARE!! There's also a closing parenthesis at the end of this file
+          // END Sistedes
+          [
           { path: '', redirectTo: '/home', pathMatch: 'full' },
           {
             path: 'reload/:rnd',
@@ -238,6 +252,9 @@ import { ThemedPageErrorComponent } from './page-error/themed-page-error.compone
           },
           { path: '**', pathMatch: 'full', component: ThemedPageNotFoundComponent },
         ]
+        // BEGIN Sistedes
+        )
+        // END Sistedes
       }
     ], {
       // enableTracing: true,

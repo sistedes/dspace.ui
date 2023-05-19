@@ -1,0 +1,10 @@
+@import 'src/styles/variables';
+
+::ng-deep div.admin > ds-themed-comcol-page-handle > ds-comcol-page-handle > * h2,
+::ng-deep div.admin > ds-themed-comcol-page-handle > ds-comcol-page-handle > * a {
+    color: var(--fbc-secondary-text);
+}
+
+::ng-deep div.admin > ds-themed-comcol-page-handle > ds-comcol-page-handle > div.mb-2 {
+    margin-bottom: -0.2rem !important;
+}
