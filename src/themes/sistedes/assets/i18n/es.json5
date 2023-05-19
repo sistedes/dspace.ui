@@ -67,5 +67,6 @@
   "person.page.email": "E-mails conocidos",
   "person.page.affiliation": "Afiliaciones conocidas",
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAuthorOfSeminar": "Autores en la Biblioteca",
+  "submission.sections.describe.relationship-lookup.selection-tab.title.isAuthorOfSeminar": "Autores seleccionados",
   "author.search.results.head": "Resultados de la búsqueda"
 }
