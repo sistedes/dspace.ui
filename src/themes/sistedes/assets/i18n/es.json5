@@ -4,6 +4,8 @@
   "menu.section.browse_global": "Toda la biblioteca",
   "menu.section.about": "Acerca de la biblioteca",
   "menu.section.rights": "Derechos de autoría",
+  "menu.section.about.breadcrumbs": "Acerca de la biblioteca",
+  "menu.section.rights.breadcrumbs": "Derechos de autoría",
   "repository.title.prefix": "Biblioteca Digital Sistedes :: ",
   "home.top-level-communities.head": "Nuestros archivos",
   "home.top-level-communities.help": "Seleccione una comunidad o categoría para explorar sus archivos.",
