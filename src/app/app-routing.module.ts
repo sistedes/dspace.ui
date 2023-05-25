@@ -41,10 +41,10 @@ import { ServerCheckGuard } from './core/server-check/server-check.guard';
 import { MenuResolver } from './menu.resolver';
 import { ThemedPageErrorComponent } from './page-error/themed-page-error.component';
 
-// BEGIN Sistedes
+// BEGIN: Sistedes
 import { SistedesRoutingModule } from 'src/themes/sistedes/app/sistedes-routing.module';
 import { SistedesMenuResolver } from 'src/themes/sistedes/app/sistedes-menu.resolver';
-// END Sistedes
+// END: Sistedes
 
 @NgModule({
   imports: [
@@ -56,15 +56,15 @@ import { SistedesMenuResolver } from 'src/themes/sistedes/app/sistedes-menu.reso
         canActivate: [AuthBlockingGuard],
         canActivateChild: [ServerCheckGuard],
         resolve: [MenuResolver,
-          // BEGIN Sistedes
+          // BEGIN: Sistedes
            SistedesMenuResolver
-          // END Sistedes
+          // END: Sistedes
         ],
         children: 
-          // BEGIN Sistedes
+          // BEGIN: Sistedes
           SistedesRoutingModule.ROUTES.concat(
           // BEWARE!! There's also a closing parenthesis at the end of this file
-          // END Sistedes
+          // END: Sistedes
           [
           { path: '', redirectTo: '/home', pathMatch: 'full' },
           {
@@ -252,9 +252,9 @@ import { SistedesMenuResolver } from 'src/themes/sistedes/app/sistedes-menu.reso
           },
           { path: '**', pathMatch: 'full', component: ThemedPageNotFoundComponent },
         ]
-        // BEGIN Sistedes
+        // BEGIN: Sistedes
         )
-        // END Sistedes
+        // END: Sistedes
       }
     ], {
       // enableTracing: true,
