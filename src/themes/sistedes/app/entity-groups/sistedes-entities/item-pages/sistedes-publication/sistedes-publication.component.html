@@ -75,17 +75,17 @@
       </div>
     </div>
     <div class="mt-3">
-      <span>
+      <span class="mr-3">
         <div class="btn" role="button" [ngClass]="showCite ? 'btn-secondary' : 'btn-outline-secondary'" (click)="clickShowCite()">
           <i class="fas fa-quote-right"></i> {{ ( showCite ? "item.page.cite.hide" : "item.page.cite.show" ) | translate }}
         </div>
       </span>
-      <span class="ml-3">
+      <span class="mr-3">
         <div class="btn" role="button"  [ngClass]="showBibtex ? 'btn-secondary' : 'btn-outline-secondary'" (click)="clickShowBibtex()">
           <i class="fas fa-quote-right"></i> {{ ( showBibtex ? "item.page.bibtex.hide" : "item.page.bibtex.show" ) | translate }}
         </div>
       </span>
-      <span class="ml-3">
+      <span>
         <a class="btn btn-outline-secondary" role="button" [href]="bibtexFile()" download="{{ getBibId() + '.bib' }}">
           <i class="fas fa-download"></i> {{ "item.page.bibtex.download" | translate }}
         </a>
