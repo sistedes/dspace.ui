@@ -54,7 +54,7 @@ export class Citation {
     }
 
     getEditors(): string[] {
-        return this.item.allMetadataValues('bs.proceedings.editors');
+        return this.item.allMetadataValues('bs.proceedings.editor');
     }
 
     getSistedesUri(): string {
@@ -68,15 +68,16 @@ export class Citation {
     asTextCitation(): string {
         return (this.getAuthors().length > 0 ? this.getAuthors().join(', ') + ": " : "")
         + this.getTitle() + ". "
-        + "In: " + this.getIsPartOf() + ". "
+        + "In: " + this.getEditors().join(', ') + ' (ed' + (this.getEditors().length > 1 ? 's' : '') + '.) '
+        + this.getIsPartOf() + ". "
         + this.getPublisher()
-        + " (" + this.getYear() + "), "
+        + " (" + this.getYear() + "). "
         + this.getSistedesUri();
     }
 
     asBibTexCitation(): string {
         return CitationUtilModule.escapeBibtex(
-            `@misc{${this.getSistedesHandle().replace(/-/g,':')},
+            `@misc{${this.getSistedesHandle().replace(/\//g,':')},
                title={{${this.getTitle()}}},
                author={${this.getAuthors().join(' and ')}},
                url={${this.getSistedesUri()}},
@@ -100,18 +101,20 @@ export class Citation {
 export class ConferenceCitation extends Citation {
     asBibTexCitation(): string {
         return CitationUtilModule.escapeBibtex(
-            `@inproceedings{${this.getSistedesHandle().replace(/-/g,':')},
+            // These fields below have been removed from @inproceedings
+            // and should be computed from the crossref field instead:
+            //   year={${this.getYear()}},
+            //   publisher={${this.getPublisher()}},
+            //   booktitle={{${this.getIsPartOf()}}},
+            `@inproceedings{${this.getSistedesHandle().replace(/\//g,':')},
                title={{${this.getTitle()}}},
                author={${this.getAuthors().join(' and ')}},
                url={${this.getSistedesUri()}},
-               year={${this.getYear()}},
-               publisher={${this.getPublisher()}},
-               booktitle={{${this.getIsPartOf()}}},
-               crossref={${this.getConferenceAcronym() + ':' + this.getEditionYear()}}
+               crossref={${this.getSistedesHandle().split("/")[0] + ':' + this.getConferenceAcronym() + ':' + this.getEditionYear()}}
              }
 
-             @proceedings{${this.getConferenceAcronym() + ':' + this.getEditionYear()}},
-               title={{${this.getIsPartOf()}}}},
+             @proceedings{${this.getSistedesHandle().split("/")[0] + ':' + this.getConferenceAcronym() + ':' + this.getEditionYear()},
+               title={{${this.getIsPartOf()}}},
                editor={${this.getEditors().join(' and ')}},
                year={${this.getEditionYear()}},
                publisher={${this.getPublisher()}},
