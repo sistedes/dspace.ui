@@ -37,7 +37,7 @@ import { SistedesPublicationSearchResultGridElementComponent } from './app/entit
 import { ProceedingsPublicationSearchResultListElementComponent } from './app/entity-groups/sistedes-entities/search-result-list-elements/proceedings-publication/proceedings-publication-search-result-list-element.component';
 import { ProceedingsPublicationListElementComponent } from './app/entity-groups/sistedes-entities/item-list-elements/proceedings-publication/proceedings-publication-list-element.component';
 import { SistedesPublicationComponent } from './app/entity-groups/sistedes-entities/item-pages/sistedes-publication/sistedes-publication.component';
-import { RightsComponent } from './app/info/rights/rights.component';
+import { AuthorsInfoComponent } from './app/info/authors-info/authors-info.component';
 
 
 /**
@@ -46,7 +46,7 @@ import { RightsComponent } from './app/info/rights/rights.component';
  */
 const ENTRY_COMPONENTS = [
   AboutComponent,
-  RightsComponent,
+  AuthorsInfoComponent,
   UntypedItemComponent,
   SistedesPublicationComponent,
   SistedesPublicationListElementComponent,

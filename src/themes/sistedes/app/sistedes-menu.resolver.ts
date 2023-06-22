@@ -25,14 +25,14 @@ const SISTEDES_MENUS = [
     } as LinkMenuItemModel
   },
   {
-    id: 'rights',
+    id: 'authors-info',
     active: false,
     visible: true,
     index: 10,
     model: {
       type: MenuItemType.LINK,
-      text: 'menu.section.rights',
-      link: '/rights'
+      text: 'menu.section.authors-info',
+      link: '/authors-info'
     } as LinkMenuItemModel
   }
 ]
