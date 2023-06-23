@@ -71,5 +71,7 @@
   "person.page.variant": "Nombres alternativos",
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAuthorOfSeminar": "Autores en la Biblioteca",
   "submission.sections.describe.relationship-lookup.selection-tab.title.isAuthorOfSeminar": "Autores seleccionados",
-  "author.search.results.head": "Resultados de la búsqueda"
+  "author.search.results.head": "Resultados de la búsqueda",
+  "community.form.sistedesid": "Identificador de Sistedes",
+  "collection.form.sistedesid": "Identificador de Sistedes",
 }
