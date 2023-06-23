@@ -68,7 +68,8 @@ export class Citation {
     asTextCitation(): string {
         return (this.getAuthors().length > 0 ? this.getAuthors().join(', ') + ": " : "")
         + this.getTitle() + ". "
-        + "In: " + this.getEditors().join(', ') + ' (ed' + (this.getEditors().length > 1 ? 's' : '') + '.) '
+        + "In: " 
+        + ( this.getEditors().length > 0 ? ( this.getEditors().join(', ') + ' (ed' + (this.getEditors().length > 1 ? 's' : '') + '.)  ' ) : "" )
         + this.getIsPartOf() + ". "
         + this.getPublisher()
         + " (" + this.getYear() + "). "
