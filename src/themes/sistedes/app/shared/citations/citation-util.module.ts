@@ -57,12 +57,12 @@ export class Citation {
         return this.item.allMetadataValues('bs.proceedings.editor');
     }
 
-    getSistedesUri(): string {
-        return 'https://hdl.handle.net/' + this.item.firstMetadataValue('dc.identifier.sistedes');
+    getUri(): string {
+        return 'https://hdl.handle.net/' + this.getHandle();
     }
 
-    getSistedesHandle(): string {
-        return this.item.firstMetadataValue('dc.identifier.sistedes');
+    getHandle(): string {
+        return this.item.firstMetadataValue('dc.identifier.sistedes') ? this.item.firstMetadataValue('dc.identifier.sistedes') : this.item.handle;
     }
     
     asTextCitation(): string {
@@ -73,15 +73,15 @@ export class Citation {
         + this.getIsPartOf() + ". "
         + this.getPublisher()
         + " (" + this.getYear() + "). "
-        + this.getSistedesUri();
+        + this.getUri();
     }
 
     asBibTexCitation(): string {
         return CitationUtilModule.escapeBibtex(
-            `@misc{${this.getSistedesHandle().replace(/\//g,':')},
+            `@misc{${this.getHandle().replace(/\//g,':')},
                title={{${this.getTitle()}}},
                author={${this.getAuthors().join(' and ')}},
-               url={${this.getSistedesUri()}},
+               url={${this.getUri()}},
                year={${this.getYear()}},
                publisher={${this.getPublisher()}},
                booktitle={{${this.getIsPartOf()}}}
@@ -107,14 +107,14 @@ export class ConferenceCitation extends Citation {
             //   year={${this.getYear()}},
             //   publisher={${this.getPublisher()}},
             //   booktitle={{${this.getIsPartOf()}}},
-            `@inproceedings{${this.getSistedesHandle().replace(/\//g,':')},
+            `@inproceedings{${this.getHandle().replace(/\//g,':')},
                title={{${this.getTitle()}}},
                author={${this.getAuthors().join(' and ')}},
-               url={${this.getSistedesUri()}},
-               crossref={${this.getSistedesHandle().split("/")[0] + ':' + this.getConferenceAcronym() + ':' + this.getEditionYear()}}
+               url={${this.getUri()}},
+               crossref={${this.getHandle().split("/")[0] + ':' + this.getConferenceAcronym() + ':' + this.getEditionYear()}}
              }
 
-             @proceedings{${this.getSistedesHandle().split("/")[0] + ':' + this.getConferenceAcronym() + ':' + this.getEditionYear()},
+             @proceedings{${this.getHandle().split("/")[0] + ':' + this.getConferenceAcronym() + ':' + this.getEditionYear()},
                title={{${this.getIsPartOf()}}},
                editor={${this.getEditors().join(' and ')}},
                year={${this.getEditionYear()}},

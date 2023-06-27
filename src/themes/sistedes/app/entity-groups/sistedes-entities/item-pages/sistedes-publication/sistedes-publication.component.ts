@@ -50,7 +50,7 @@ export class SistedesPublicationComponent extends ItemComponent {
   }
 
   getBibId(): string {
-    return this.getCitation().getSistedesHandle().replace(/\//g,":");
+    return this.getCitation().getHandle().replace(/\//g,":");
   }
   
   getCiteStrip(): string {
@@ -63,7 +63,7 @@ export class SistedesPublicationComponent extends ItemComponent {
 
   getUriMetadata(): MetadataValue[] {
     var value = new MetadataValue();
-    value.value = this.getCitation().getSistedesUri();
+    value.value = this.getCitation().getUri();
     return [ value ];
   }
 
