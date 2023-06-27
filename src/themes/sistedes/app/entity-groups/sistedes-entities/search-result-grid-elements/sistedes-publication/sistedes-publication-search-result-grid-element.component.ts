@@ -33,11 +33,11 @@ export class SistedesPublicationSearchResultGridElementComponent extends SearchR
   dsoTitle: string;
 
   constructor(
+    public dsoNameService: DSONameService,
     protected truncatableService: TruncatableService,
     protected bitstreamDataService: BitstreamDataService,
-    private dsoNameService: DSONameService,
   ) {
-    super(truncatableService, bitstreamDataService);
+    super(dsoNameService, truncatableService, bitstreamDataService);
   }
 
   ngOnInit(): void {
