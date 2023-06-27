@@ -74,4 +74,6 @@
   "author.search.results.head": "Resultados de la búsqueda",
   "community.form.sistedesid": "Identificador de Sistedes",
   "collection.form.sistedesid": "Identificador de Sistedes",
+  "browse.metadata.srsc.breadcrumbs": "Examinar por vocabulario controlado",
+  "menu.section.browse_global_by_srsc": "Por vocabulario controlado",
 }
