@@ -1,4 +1,3 @@
-  
 {
   "access-control-access-conditions": "Condiciones de acceso",
   "access-control-add-more": "Añadir más",
@@ -56,7 +55,7 @@
   "community-access-control-title": "Este formulario le permite realizar cambios en las condiciones de acceso de todos los elementos propiedad de cualquier colección bajo esta comunidad.Se pueden realizar cambios en todos los metadatos del elemento o en todo el contenido (bitstreams).",
   "community.edit.tabs.access-control.head": "Control de acceso",
   "community.edit.tabs.access-control.title": "Editar comunidad - Control de acceso",
-  "community.form.errors.sistedesid.required", "Se requiere un identificador de Sistedes",
+  "community.form.errors.sistedesid.required": "Se requiere un identificador de Sistedes",
   "community.form.sistedesid": "Identificador de Sistedes",
   "community.page.handle.internal": "URI administrativa para esta comunidad:",
   "community.page.handle": "URI permantente para esta comunidad:",
@@ -89,7 +88,7 @@
   "info.feedback.create.success": "Mensaje enviado satisfactoriamente",
   "info.feedback.email_help": "Esta dirección se usará para el seguimiento de su mensaje.",
   "info.feedback.email-label": "Su correo electrónico",
-  "info.feedback.error.email.required": "se requiere una dirección válida de correo electrónico",
+  "info.feedback.error.email.required": "Se requiere una dirección válida de correo electrónico",
   "info.feedback.error.message.required": "Se requiere un mensaje",
   "info.feedback.head": "Contacto",
   "info.feedback.info": "Gracias por escribirnos. ¡Le responderemos a la mayor brevedad!",
