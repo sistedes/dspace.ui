@@ -112,6 +112,8 @@
   "item.page.uri": "Enlace permanente",
   "item.preview.dc.publisher": "Editor:",
   "login.form.header": "Inicie sesión",
+  "media-viewer.next": "▶",
+  "media-viewer.previous": "◀",
   "menu.section.about": "Acerca de la biblioteca",
   "menu.section.about.breadcrumbs": "Acerca de la biblioteca",
   "menu.section.access_control_bulk": "Control de acceso por lotes",
