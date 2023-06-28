@@ -126,6 +126,8 @@ import { DsoSharedModule } from '../../app/dso-shared/dso-shared.module';
 import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-alert.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import { FullFileSectionComponent } from './app/item-page/full/field-components/file-section/full-file-section.component';
+import { MediaViewerComponent } from './app/item-page/media-viewer/media-viewer.component';
+import { MediaViewerVideoComponent } from './app/item-page/media-viewer/media-viewer-video/media-viewer-video.component';
 
 const DECLARATIONS = [
   FileSectionComponent,
@@ -183,6 +185,8 @@ const DECLARATIONS = [
   ResultsBackButtonComponent,
   DsoEditMetadataComponent,
   FullFileSectionComponent,
+  MediaViewerComponent,
+  MediaViewerVideoComponent
 ];
 
 @NgModule({
