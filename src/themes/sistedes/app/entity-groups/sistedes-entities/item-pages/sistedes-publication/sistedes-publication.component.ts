@@ -54,7 +54,7 @@ export class SistedesPublicationComponent extends ItemComponent {
   }
 
   getBibFilename(): string {
-    return this.getCitation().getHandle().replace(/\//g,"-");
+    return this.getCitation().getHandle().replace(/\//g,"-") + ".bib";
   }
   
   getCiteStrip(): string {
