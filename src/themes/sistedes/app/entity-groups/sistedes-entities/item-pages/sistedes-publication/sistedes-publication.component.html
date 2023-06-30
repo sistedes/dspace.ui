@@ -76,8 +76,8 @@
         </div>
       </span>
       <span>
-        <div class="btn btn-outline-warning" role="button" routerLink="/info/feedback">
-          <i class="fa fa-exclamation-circle"></i> {{ "autor.page.report-error" | translate }}
+        <div *ngIf="object.firstMetadataValue('dspace.entity.type') as type" class="btn btn-outline-warning" role="button" routerLink="/info/feedback">
+          <i class="fa fa-exclamation-circle"></i> {{ type.toLowerCase() + "autor.page.report-error" | translate }}
         </div>
       </span>
     </div>
