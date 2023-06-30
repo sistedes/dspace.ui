@@ -43,9 +43,6 @@
       [fields]="['dc.rights.license']"
       [label]="'item.page.license'">
     </ds-generic-item-page-field>
-    <div class="btn btn-outline-warning" role="button" routerLink="/info/feedback">
-      <i class="fa fa-exclamation-circle"></i> {{ "item.page.report-error" | translate }}
-    </div>
   </div>
   <div class="col-xs-12 col-md-7">
     <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
@@ -73,9 +70,16 @@
     </div>
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
     <div>
-      <div class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']">
-        <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
-      </div>
+      <span class="mr-3">
+        <div class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']">
+          <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
+        </div>
+      </span>
+      <span>
+        <div class="btn btn-outline-warning" role="button" routerLink="/info/feedback">
+          <i class="fa fa-exclamation-circle"></i> {{ "autor.page.report-error" | translate }}
+        </div>
+      </span>
     </div>
     <div class="mt-3">
       <span class="mr-3">
