@@ -57,6 +57,7 @@
   "collection.form.sistedesid": "Identificador de Sistedes",
   "collection.page.handle.internal": "URI administrativa para esta colección:",
   "collection.page.handle": "URI permanente para esta colección:",
+  "collection.page.report-error": "Notificar un error en esta colección",
   "community-access-control-title": "Este formulario le permite realizar cambios en las condiciones de acceso de todos los elementos propiedad de cualquier colección bajo esta comunidad.Se pueden realizar cambios en todos los metadatos del elemento o en todo el contenido (bitstreams).",
   "community.edit.tabs.access-control.head": "Control de acceso",
   "community.edit.tabs.access-control.title": "Editar comunidad - Control de acceso",
@@ -64,6 +65,7 @@
   "community.form.sistedesid": "Identificador de Sistedes",
   "community.page.handle.internal": "URI administrativa para esta comunidad:",
   "community.page.handle": "URI permantente para esta comunidad:",
+  "community.page.report-error": "Notificar un error en esta comunidad",
   "curation-task.task.registerdoi.label": "Registro DOI",
   "dso-selector.set-scope.community.button": "Buscar en toda la biblioteca",
   "dso.name.unnamed": "Sin nombre",
@@ -175,6 +177,4 @@
   "workspace-item.delete.notification.error.title": "Algo salió mal",
   "workspace-item.delete.notification.success.title": "Eliminada",
   "workspace-item.delete.title": "Este ítem se eliminó con éxito del espacio de trabajo",
-  "collection.page.report-error": "Notificar un error en esta colección",
-  "community.page.report-error": "Notificar un error en esta comunidad",
 }
