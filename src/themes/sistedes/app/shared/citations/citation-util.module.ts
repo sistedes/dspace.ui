@@ -26,7 +26,10 @@ export class Citation {
     }
 
     getAuthors(): string[] {
-        return Citation.abbreviateNames(this.item.allMetadataValues('dc.contributor.signature'));
+        return Citation.abbreviateNames(
+            this.item.allMetadataValues('dc.contributor.signature').length > 0 
+            ? this.item.allMetadataValues('dc.contributor.signature') 
+            : this.item.allMetadataValues('dc.contributor.author'));
     }
 
     getIsPartOf(): string {
@@ -92,7 +95,7 @@ export class Citation {
         var result = new Array();
         for (var fullname of fullnames) {
             var surname = fullname.split(",")[0];
-            var name = fullname.split(",")[1].split(/\s+/).map(n => n.substring(0, 1) + ".").join(" ");
+            var name = fullname.split(",")[1].trim().split(/\s+/).map(n => n.substring(0, 1) + ".").join(" ");
             result.push(surname + ", " + name);
         }
         return result;
