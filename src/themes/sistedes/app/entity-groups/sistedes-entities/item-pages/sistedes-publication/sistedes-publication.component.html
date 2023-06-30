@@ -43,6 +43,9 @@
       [fields]="['dc.rights.license']"
       [label]="'item.page.license'">
     </ds-generic-item-page-field>
+    <div class="btn btn-outline-warning" role="button" routerLink="/info/feedback">
+      <i class="fa fa-exclamation-circle"></i> {{ "item.page.report-error" | translate }}
+    </div>
   </div>
   <div class="col-xs-12 col-md-7">
     <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
