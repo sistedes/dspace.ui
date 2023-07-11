@@ -154,7 +154,7 @@
   "process.new.notification.error.max-upload.content": "El archivo excede el tamaño máximo de carga",
   "relationships.isAbstractOf.Resumen": "Resúmenes",
   "relationships.isAuthorOf.Autor": "Autores",
-  "relationships.isBulletinOf.Boletín ": "Boletines",
+  "relationships.isBulletinOf.Boletín": "Boletines",
   "relationships.isPaperOf.Artículo": "Artículos",
   "relationships.isSeminarOf.Seminario": "Seminarios",
   "repository.title.prefix": "Biblioteca Digital Sistedes :: ",
