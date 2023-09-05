@@ -57,7 +57,7 @@ export class Citation {
     }
 
     getEditors(): string[] {
-        return this.item.allMetadataValues('bs.proceedings.editor');
+        return Citation.abbreviateNames(this.item.allMetadataValues('bs.proceedings.editor'));
     }
 
     getUri(): string {
