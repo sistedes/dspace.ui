@@ -128,6 +128,7 @@ import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import { FullFileSectionComponent } from './app/item-page/full/field-components/file-section/full-file-section.component';
 import { MediaViewerComponent } from './app/item-page/media-viewer/media-viewer.component';
 import { MediaViewerVideoComponent } from './app/item-page/media-viewer/media-viewer-video/media-viewer-video.component';
+import { RecentCommunitiesListComponent } from './app/home-page/recent-communities-list/recent-communities-list.component';
 
 const DECLARATIONS = [
   FileSectionComponent,
@@ -186,7 +187,8 @@ const DECLARATIONS = [
   DsoEditMetadataComponent,
   FullFileSectionComponent,
   MediaViewerComponent,
-  MediaViewerVideoComponent
+  MediaViewerVideoComponent,
+  RecentCommunitiesListComponent
 ];
 
 @NgModule({

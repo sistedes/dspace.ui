@@ -23,6 +23,10 @@ import { MarkdownConfig } from './markdown-config.interface';
 import { FilterVocabularyConfig } from './filter-vocabulary-config';
 import { DiscoverySortConfig } from './discovery-sort.config';
 
+// BEGIN: Sistedes
+import { SistedesConfig } from 'src/themes/sistedes/sistedes-config.interface';
+// END: Sistedes
+
 export class DefaultAppConfig implements AppConfig {
   production = false;
 
@@ -432,4 +436,15 @@ export class DefaultAppConfig implements AppConfig {
     sortField:'dc.title',
     sortDirection:'ASC',
   };
+
+  // BEGIN: Sistedes
+  sistedes: SistedesConfig = {
+    recentCommunities: {
+      //The number of item showing in recent communities components
+      pageSize: 6,
+      //sort record of recent submission
+      sortField: 'dc.title',
+    },
+  };
+  // END: Sistedes
 }
