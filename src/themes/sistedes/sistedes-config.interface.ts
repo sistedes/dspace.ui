@@ -11,9 +11,9 @@ export interface SistedesConfig extends Config {
     pageSize: number;
 
     /**
-     * sort record of recent submission
+     * query used to retrieve the recent communities
      */
-    sortField: string;
+    query: string;
   }
 
 }

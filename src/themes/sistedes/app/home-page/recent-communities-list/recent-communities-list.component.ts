@@ -33,7 +33,6 @@ import { Filter } from '@material-ui/icons';
 export class RecentCommunitiesListComponent implements OnInit {
   itemRD$: Observable<RemoteData<PaginatedList<Item>>>;
   paginationConfig: PaginationComponentOptions;
-  sortConfig: SortOptions;
 
   /**
  * The view-mode we're currently on
@@ -58,19 +57,15 @@ export class RecentCommunitiesListComponent implements OnInit {
       currentPage: 1,
       maxSize: 1
     });
-    this.sortConfig = new SortOptions(environment.sistedes.recentCommunities.sortField, SortDirection.ASC);
   }
   ngOnInit(): void {
     const linksToFollow: FollowLinkConfig<Item>[] = [];
-    var startYear = new Date().getFullYear() - 1;
-    var endYear = new Date().getFullYear();
 
     this.itemRD$ = this.searchService.search(
       new PaginatedSearchOptions({
         pagination: this.paginationConfig,
         dsoTypes: [DSpaceObjectType.COMMUNITY],
-        sort: this.sortConfig,
-        query: 'dc.title:[' + startYear + ' TO ' + endYear + ']',
+        query: environment.sistedes.recentCommunities.query,
       }),
       undefined,
       undefined,

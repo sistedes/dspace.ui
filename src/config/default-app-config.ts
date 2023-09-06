@@ -441,9 +441,9 @@ export class DefaultAppConfig implements AppConfig {
   sistedes: SistedesConfig = {
     recentCommunities: {
       //The number of item showing in recent communities components
-      pageSize: 6,
-      //sort record of recent submission
-      sortField: 'dc.title',
+      pageSize: 3,
+      //query using the 
+      query:  'dc.title:[' + (new Date().getFullYear() - 1) + ' TO ' + new Date().getFullYear() + ']',  
     },
   };
   // END: Sistedes
