@@ -21,18 +21,19 @@ import { DSpaceObjectType } from 'src/app/core/shared/dspace-object-type.model';
 import { Filter } from '@material-ui/icons';
 
 @Component({
-  selector: 'ds-recent-communities-list',
-  templateUrl: './recent-communities-list.component.html',
-  styleUrls: ['./recent-communities-list.component.scss'],
+  selector: 'ds-highlighted-communities-list',
+  templateUrl: './highlighted-communities-list.component.html',
+  styleUrls: ['./highlighted-communities-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     fadeIn,
     fadeInOut
   ]
 })
-export class RecentCommunitiesListComponent implements OnInit {
+export class HighlightedCommunitiesListComponent implements OnInit {
   itemRD$: Observable<RemoteData<PaginatedList<Item>>>;
   paginationConfig: PaginationComponentOptions;
+  sortConfig: SortOptions;
 
   /**
  * The view-mode we're currently on
@@ -53,10 +54,11 @@ export class RecentCommunitiesListComponent implements OnInit {
 
     this.paginationConfig = Object.assign(new PaginationComponentOptions(), {
       id: 'hp',
-      pageSize: environment.sistedes.recentCommunities.pageSize,
+      pageSize: environment.sistedes.highlightedCommunities.pageSize,
       currentPage: 1,
       maxSize: 1
     });
+    this.sortConfig = new SortOptions(environment.sistedes.highlightedCommunities.sortField, SortDirection.ASC);
   }
   ngOnInit(): void {
     const linksToFollow: FollowLinkConfig<Item>[] = [];
@@ -65,7 +67,8 @@ export class RecentCommunitiesListComponent implements OnInit {
       new PaginatedSearchOptions({
         pagination: this.paginationConfig,
         dsoTypes: [DSpaceObjectType.COMMUNITY],
-        query: environment.sistedes.recentCommunities.query,
+        sort: this.sortConfig,
+        query: environment.sistedes.highlightedCommunities.query,
       }),
       undefined,
       undefined,

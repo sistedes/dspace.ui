@@ -439,10 +439,12 @@ export class DefaultAppConfig implements AppConfig {
 
   // BEGIN: Sistedes
   sistedes: SistedesConfig = {
-    recentCommunities: {
-      //The number of item showing in recent communities components
+    highlightedCommunities: {
+      // The number of items showing in highlighted communities components
       pageSize:5,
-      //Show communities whose title contains the current year
+      // sort record of highlighted submissions
+      sortField: 'dc.title',
+      // Show communities whose title contains the current year
       query:  'dc.title:' + new Date().getFullYear(),  
     },
   };
