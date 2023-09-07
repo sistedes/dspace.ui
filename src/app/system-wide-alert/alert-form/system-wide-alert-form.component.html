@@ -97,7 +97,9 @@
             } }}
         </span>
             </span>
-            <span>{{formMessage.value}}</span>
+            <!-- BEGIN: Sistedes -->
+            <span [innerHTML]="formMessage.value"></span>
+            <!-- END: Sistedes -->
         </div>
     </div>
 
