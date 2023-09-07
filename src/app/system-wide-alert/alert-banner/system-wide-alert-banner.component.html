@@ -21,7 +21,9 @@
             } }}
         </span>
             </span>
-            <span>{{(systemWideAlert$ |async)?.message}}</span>
+            <!-- BEGIN: Sistedes -->
+            <span [innerHTML]="(systemWideAlert$ |async)?.message"></span>
+            <!-- END: Sistedes -->
         </div>
     </div>
 </div>
