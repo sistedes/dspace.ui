@@ -59,7 +59,18 @@ export class CommunityFormComponent extends ComColFormComponent<Community> imple
       required: null
     },
     errorMessages: {
-      required: 'Please enter a Sistedes identifier for this collection'
+      required: 'Please enter a Sistedes identifier for this community'
+    },
+  }),
+  new DynamicInputModel({
+    id: 'date-issued',
+    name: 'dc.date.issued',
+    required: true,
+    validators: {
+      required: null
+    },
+    errorMessages: {
+      required: 'Please enter a creation date for this community'
     },
   }),
   // END: Sistedes
