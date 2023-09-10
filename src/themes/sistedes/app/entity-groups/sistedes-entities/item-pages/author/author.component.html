@@ -57,6 +57,10 @@
       [fields]="['person.affiliation.name']"
       [label]="'person.page.affiliation'">
     </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['person.web']"
+      [label]="'person.page.web'">
+    </ds-generic-item-page-field>
     <div>
       <span class="mr-3">
         <div class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']">
