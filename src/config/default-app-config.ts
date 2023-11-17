@@ -23,6 +23,10 @@ import { MarkdownConfig } from './markdown-config.interface';
 import { FilterVocabularyConfig } from './filter-vocabulary-config';
 import { DiscoverySortConfig } from './discovery-sort.config';
 
+// BEGIN: Sistedes
+import { SistedesConfig } from 'src/themes/sistedes/sistedes-config.interface';
+// END: Sistedes
+
 export class DefaultAppConfig implements AppConfig {
   production = false;
 
@@ -434,4 +438,17 @@ export class DefaultAppConfig implements AppConfig {
     sortField:'dc.title',
     sortDirection:'ASC',
   };
+
+  // BEGIN: Sistedes
+  sistedes: SistedesConfig = {
+    highlightedCommunities: {
+      // The number of items showing in highlighted communities components
+      pageSize:5,
+      // sort record of highlighted submissions
+      sortField: 'dc.title',
+      // Show communities whose title contains the current year
+      query:  'dc.title:' + new Date().getFullYear(),  
+    },
+  };
+  // END: Sistedes
 }

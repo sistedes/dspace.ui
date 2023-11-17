@@ -23,6 +23,10 @@ import { MarkdownConfig } from './markdown-config.interface';
 import { FilterVocabularyConfig } from './filter-vocabulary-config';
 import { DiscoverySortConfig } from './discovery-sort.config';
 
+// BEGIN: Sistedes
+import { SistedesConfig } from 'src/themes/sistedes/sistedes-config.interface';
+// END: Sistedes
+
 interface AppConfig extends Config {
   ui: UIServerConfig;
   rest: ServerConfig;
@@ -48,6 +52,9 @@ interface AppConfig extends Config {
   markdown: MarkdownConfig;
   vocabularies: FilterVocabularyConfig[];
   comcolSelectionSort: DiscoverySortConfig;
+  // BEGIN: Sistedes
+  sistedes: SistedesConfig;
+  // END: Sistedes
 }
 
 /**

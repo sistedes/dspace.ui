@@ -1,0 +1,11 @@
+video {
+    width: 100%;
+    height: auto;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .25rem;
+    grid-auto-rows: minmax(10px, auto);
+  }
