@@ -94,9 +94,13 @@ export class Citation {
     private static abbreviateNames(fullnames : string[]): string[] {
         var result = new Array();
         for (var fullname of fullnames) {
-            var surname = fullname.split(",")[0];
-            var name = fullname.split(",")[1].trim().split(/\s+/).map(n => n.substring(0, 1) + ".").join(" ");
-            result.push(surname + ", " + name);
+            if (!fullname.includes(",")) {
+                result.push(fullname);
+            } else {
+                var surname = fullname.split(",")[0];
+                var name = fullname.split(",")[1].trim().split(/\s+/).map(n => n.substring(0, 1) + ".").join(" ");
+                result.push(surname + ", " + name);
+            }
         }
         return result;
     }
