@@ -3,6 +3,10 @@ import { BuildConfig } from 'src/config/build-config.interface';
 import { RestRequestMethod } from '../app/core/data/rest-request-method';
 import { NotificationAnimationsType } from '../app/shared/notifications/models/notification-animations-type';
 
+// BEGIN: Sistedes
+import { SistedesConfig } from 'src/themes/sistedes/sistedes-config.interface';
+// END: Sistedes
+
 export const environment: BuildConfig = {
   production: false,
 
@@ -314,4 +318,14 @@ export const environment: BuildConfig = {
       enabled: true
     }
   ]
+  // BEGIN: Sistedes
+  ,
+  sistedes: {
+    highlightedCommunities: {
+      pageSize:5,
+      sortField: 'dc.title',
+      query:  'dc.title:' + new Date().getFullYear(),
+    }
+  }
+  // END: Sistedes
 };

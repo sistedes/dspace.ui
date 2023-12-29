@@ -5,7 +5,7 @@ import { Config } from 'src/config/config.interface';
  */
 export interface SistedesConfig extends Config {
   highlightedCommunities: {
-    /**
+  /**
    * The number of item showing in recent communities components
    */
     pageSize: number;
