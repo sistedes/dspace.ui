@@ -35,7 +35,7 @@ const SISTEDES_MENUS = [
       link: '/authors-info'
     } as LinkMenuItemModel
   }
-]
+];
 
 @Injectable({
   providedIn: 'root'
@@ -48,7 +48,7 @@ export class SistedesMenuResolver extends MenuResolver implements Resolve<boolea
     protected modalService: NgbModal,
     protected scriptDataService: ScriptDataService,
   ) {
-    super(menuService, browseService, authorizationService, modalService, scriptDataService)
+    super(menuService, browseService, authorizationService, modalService, scriptDataService);
   }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {

@@ -447,7 +447,7 @@ export class DefaultAppConfig implements AppConfig {
       // sort record of highlighted submissions
       sortField: 'dc.title',
       // Show communities whose title contains the current year
-      query:  'dc.title:' + new Date().getFullYear(),  
+      query:  'dc.title:' + new Date().getFullYear(),
     },
   };
   // END: Sistedes

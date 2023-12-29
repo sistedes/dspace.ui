@@ -17,8 +17,8 @@ import { Community } from 'src/app/core/shared/community.model';
  * This component represents a detail page for a single community
  */
 export class CommunityPageComponent extends BaseComponent {
-  getPermanentUri(community : Community): string {
-    var sistedesId = community.firstMetadataValue('dc.identifier.sistedes');
-    return sistedesId ? "https://hdl.handle.net/" + sistedesId : community.handle;
+  getPermanentUri(community: Community): string {
+    let sistedesId = community.firstMetadataValue('dc.identifier.sistedes');
+    return sistedesId ? 'https://hdl.handle.net/' + sistedesId : community.handle;
   }
 }

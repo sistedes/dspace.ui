@@ -18,7 +18,6 @@ import { APP_CONFIG, AppConfig } from 'src/config/app-config.interface';
 import { isPlatformBrowser } from '@angular/common';
 import { setPlaceHolderAttributes } from 'src/app/shared/utils/object-list-utils';
 import { DSpaceObjectType } from 'src/app/core/shared/dspace-object-type.model';
-import { Filter } from '@material-ui/icons';
 
 @Component({
   selector: 'ds-highlighted-communities-list',

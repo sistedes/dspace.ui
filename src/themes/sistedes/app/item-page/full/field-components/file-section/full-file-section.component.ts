@@ -27,7 +27,7 @@ export class FullFileSectionComponent extends BaseComponent {
   });
 
   initialize(): void {
-    super.initialize()
+    super.initialize();
     this.other$ = this.paginationService.getCurrentPagination(this.originalOptions.id, this.originalOptions).pipe(
       switchMap((options: PaginationComponentOptions) => this.bitstreamDataService.findAllByItemAndBundleName(
         this.item,

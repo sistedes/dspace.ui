@@ -60,7 +60,7 @@ import { SistedesMenuResolver } from 'src/themes/sistedes/app/sistedes-menu.reso
            SistedesMenuResolver
           // END: Sistedes
         ],
-        children: 
+        children:
           // BEGIN: Sistedes
           SistedesRoutingModule.ROUTES.concat(
           // BEWARE!! There's also a closing parenthesis at the end of this file

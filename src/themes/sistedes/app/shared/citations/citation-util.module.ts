@@ -1,7 +1,8 @@
-import { NgModule } from "@angular/core";
-import { Item } from "src/app/core/shared/item.model";
+/* eslint-disable max-classes-per-file */
+import { NgModule } from '@angular/core';
+import { Item } from 'src/app/core/shared/item.model';
 
- 
+
 @NgModule({
 imports: [],
 declarations: [],
@@ -9,26 +10,40 @@ providers: [],
 })
 
 export class Citation {
-    
-    public static from(item : Item): Citation {
-        if (item.firstMetadataValue('dspace.entity.type') == 'Resumen' 
-            || item.firstMetadataValue('dspace.entity.type') == 'Artículo') {
+
+    public static from(item: Item): Citation {
+        if (item.firstMetadataValue('dspace.entity.type') === 'Resumen'
+            || item.firstMetadataValue('dspace.entity.type') === 'Artículo') {
             return new ConferenceCitation(item);
         } else {
             return new Citation(item);
         }
     }
 
-    protected constructor(protected item : Item) { }
+    protected constructor(protected item: Item) { }
+
+    private static abbreviateNames(fullnames: string[]): string[] {
+        const result = [];
+        for (const fullname of fullnames) {
+            if (!fullname.includes(',')) {
+                result.push(fullname);
+            } else {
+                const surname = fullname.split(',')[0];
+                const name = fullname.split(',')[1].trim().split(/\s+/).map(n => n.substring(0, 1) + '.').join(' ');
+                result.push(surname + ', ' + name);
+            }
+        }
+        return result;
+    }
 
     getTitle(): string {
-        return this.item.firstMetadataValue('dc.title')
+        return this.item.firstMetadataValue('dc.title');
     }
 
     getAuthors(): string[] {
         return Citation.abbreviateNames(
-            this.item.allMetadataValues('dc.contributor.signature').length > 0 
-            ? this.item.allMetadataValues('dc.contributor.signature') 
+            this.item.allMetadataValues('dc.contributor.signature').length > 0
+            ? this.item.allMetadataValues('dc.contributor.signature')
             : this.item.allMetadataValues('dc.contributor.author'));
     }
 
@@ -41,7 +56,7 @@ export class Citation {
     }
 
     getYear(): number {
-        return new Date(this.item.firstMetadataValue('dc.date.issued')).getFullYear()
+        return new Date(this.item.firstMetadataValue('dc.date.issued')).getFullYear();
     }
 
     getConferenceAcronym(): string {
@@ -53,7 +68,7 @@ export class Citation {
     }
 
     getEditionYear(): number {
-        return  new Date(this.item.firstMetadataValue('bs.edition.date')).getFullYear()
+        return  new Date(this.item.firstMetadataValue('bs.edition.date')).getFullYear();
     }
 
     getEditors(): string[] {
@@ -67,15 +82,15 @@ export class Citation {
     getHandle(): string {
         return this.item.firstMetadataValue('dc.identifier.sistedes') ? this.item.firstMetadataValue('dc.identifier.sistedes') : this.item.handle;
     }
-    
+
     asTextCitation(): string {
-        return (this.getAuthors().length > 0 ? this.getAuthors().join(', ') + ": " : "")
-        + this.getTitle() + ". "
-        + "In: " 
-        + ( this.getEditors().length > 0 ? ( this.getEditors().join(', ') + ' (ed' + (this.getEditors().length > 1 ? 's' : '') + '.)  ' ) : "" )
-        + this.getIsPartOf() + ". "
+        return (this.getAuthors().length > 0 ? this.getAuthors().join(', ') + ': ' : '')
+        + this.getTitle() + '. '
+        + 'In: '
+        + ( this.getEditors().length > 0 ? ( this.getEditors().join(', ') + ' (ed' + (this.getEditors().length > 1 ? 's' : '') + '.)  ' ) : '' )
+        + this.getIsPartOf() + '. '
         + this.getPublisher()
-        + " (" + this.getYear() + "). "
+        + ' (' + this.getYear() + '). '
         + this.getUri();
     }
 
@@ -89,20 +104,6 @@ export class Citation {
                publisher={${this.getPublisher()}},
                booktitle={{${this.getIsPartOf()}}}
              }`.replace(/ {12}/g, ''));
-    }
-
-    private static abbreviateNames(fullnames : string[]): string[] {
-        var result = new Array();
-        for (var fullname of fullnames) {
-            if (!fullname.includes(",")) {
-                result.push(fullname);
-            } else {
-                var surname = fullname.split(",")[0];
-                var name = fullname.split(",")[1].trim().split(/\s+/).map(n => n.substring(0, 1) + ".").join(" ");
-                result.push(surname + ", " + name);
-            }
-        }
-        return result;
     }
 }
 
@@ -118,10 +119,10 @@ export class ConferenceCitation extends Citation {
                title={{${this.getTitle()}}},
                author={${this.getAuthors().join(' and ')}},
                url={${this.getUri()}},
-               crossref={${this.getHandle().split("/")[0] + ':' + this.getConferenceAcronym() + ':' + this.getEditionYear()}}
+               crossref={${this.getHandle().split('/')[0] + ':' + this.getConferenceAcronym() + ':' + this.getEditionYear()}}
              }
 
-             @proceedings{${this.getHandle().split("/")[0] + ':' + this.getConferenceAcronym() + ':' + this.getEditionYear()},
+             @proceedings{${this.getHandle().split('/')[0] + ':' + this.getConferenceAcronym() + ':' + this.getEditionYear()},
                title={{${this.getIsPartOf()}}},
                editor={${this.getEditors().join(' and ')}},
                year={${this.getEditionYear()}},
@@ -132,8 +133,8 @@ export class ConferenceCitation extends Citation {
 
 
 class CitationUtilModule {
-    
-    public static escapeBibtex(text : string): string {
+
+    public static escapeBibtex(text: string): string {
         return text
             .replace(/á/g, "\\'{a}")
             .replace(/é/g, "\\'{e}")
@@ -145,26 +146,26 @@ class CitationUtilModule {
             .replace(/Í/g, "\\'{I}")
             .replace(/Ó/g, "\\'{O}")
             .replace(/Ú/g, "\\'{U}")
-            .replace(/à/g, "\\`{a}")
-            .replace(/à/g, "\\`{e}")
-            .replace(/ì/g, "\\`{i}")
-            .replace(/ò/g, "\\`{o}")
-            .replace(/ù/g, "\\`{u}")
-            .replace(/À/g, "\\`{A}")
-            .replace(/È/g, "\\`{E}")
-            .replace(/Ì/g, "\\`{I}")
-            .replace(/Ò/g, "\\`{O}")
-            .replace(/Ù/g, "\\`{U}")
-            .replace(/â/g, "\\^{a}")
-            .replace(/ê/g, "\\^{e}")
-            .replace(/î/g, "\\^{i}")
-            .replace(/ô/g, "\\^{o}")
-            .replace(/û/g, "\\^{u}")
-            .replace(/Â/g, "\\^{A}")
-            .replace(/Ê/g, "\\^{E}")
-            .replace(/Î/g, "\\^{I}")
-            .replace(/Ô/g, "\\^{O}")
-            .replace(/Û/g, "\\^{U}")
+            .replace(/à/g, '\\`{a}')
+            .replace(/à/g, '\\`{e}')
+            .replace(/ì/g, '\\`{i}')
+            .replace(/ò/g, '\\`{o}')
+            .replace(/ù/g, '\\`{u}')
+            .replace(/À/g, '\\`{A}')
+            .replace(/È/g, '\\`{E}')
+            .replace(/Ì/g, '\\`{I}')
+            .replace(/Ò/g, '\\`{O}')
+            .replace(/Ù/g, '\\`{U}')
+            .replace(/â/g, '\\^{a}')
+            .replace(/ê/g, '\\^{e}')
+            .replace(/î/g, '\\^{i}')
+            .replace(/ô/g, '\\^{o}')
+            .replace(/û/g, '\\^{u}')
+            .replace(/Â/g, '\\^{A}')
+            .replace(/Ê/g, '\\^{E}')
+            .replace(/Î/g, '\\^{I}')
+            .replace(/Ô/g, '\\^{O}')
+            .replace(/Û/g, '\\^{U}')
             .replace(/ä/g, '\\"{a}')
             .replace(/ë/g, '\\"{e}')
             .replace(/ï/g, '\\"{i}')
@@ -184,6 +185,6 @@ class CitationUtilModule {
             .replace(/Ẽ/g, '\\~{E}')
             .replace(/Ĩ/g, '\\~{I}')
             .replace(/Õ/g, '\\~{O}')
-            .replace(/Ũ/g, '\\~{U}')
+            .replace(/Ũ/g, '\\~{U}');
       }
 }

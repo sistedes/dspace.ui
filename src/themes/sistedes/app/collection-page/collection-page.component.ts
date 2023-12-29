@@ -20,8 +20,8 @@ import { Collection } from 'src/app/core/shared/collection.model';
  * This component represents a detail page for a single collection
  */
 export class CollectionPageComponent extends BaseComponent {
-  getPermanentUri(collection : Collection): string {
-    var sistedesId = collection.firstMetadataValue('dc.identifier.sistedes');
-    return sistedesId ? "https://hdl.handle.net/" + sistedesId : collection.handle;
+  getPermanentUri(collection: Collection): string {
+    let sistedesId = collection.firstMetadataValue('dc.identifier.sistedes');
+    return sistedesId ? 'https://hdl.handle.net/' + sistedesId : collection.handle;
   }
 }

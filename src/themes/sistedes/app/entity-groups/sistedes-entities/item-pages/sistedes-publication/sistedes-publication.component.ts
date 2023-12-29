@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ViewMode } from '../../../../../../../app/core/shared/view-mode.model';
 import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
 import { ItemComponent } from '../../../../../../../app/item-page/simple/item-types/shared/item.component';
@@ -26,19 +26,19 @@ import { MetadataValue } from 'src/app/core/shared/metadata.models';
 })
 export class SistedesPublicationComponent extends ItemComponent {
 
-  citation: Citation = null
-  showCite: boolean = false
-  showBibtex: boolean = false
+  citation: Citation = null;
+  showCite = false;
+  showBibtex = false;
 
-  constructor(protected sanitizer: DomSanitizer, protected routeService: RouteService, protected router: Router) { 
-    super(routeService, router)
+  constructor(protected sanitizer: DomSanitizer, protected routeService: RouteService, protected router: Router) {
+    super(routeService, router);
   }
 
   bibtexFile(): SafeResourceUrl {
     const blob = new Blob([this.getBibStrip()], { type: 'application/octet-stream' });
     return this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
   }
-  
+
   clickShowCite(): void {
     this.showBibtex = false;
     this.showCite = !this.showCite;
@@ -50,13 +50,13 @@ export class SistedesPublicationComponent extends ItemComponent {
   }
 
   getBibId(): string {
-    return this.getCitation().getHandle().replace(/\//g,":");
+    return this.getCitation().getHandle().replace(/\//g,':');
   }
 
   getBibFilename(): string {
-    return this.getCitation().getHandle().replace(/\//g,"-") + ".bib";
+    return this.getCitation().getHandle().replace(/\//g,'-') + '.bib';
   }
-  
+
   getCiteStrip(): string {
     return this.getCitation().asTextCitation();
   }
@@ -66,7 +66,7 @@ export class SistedesPublicationComponent extends ItemComponent {
   }
 
   getUriMetadata(): MetadataValue[] {
-    var value = new MetadataValue();
+    let value = new MetadataValue();
     value.value = this.getCitation().getUri();
     return [ value ];
   }
