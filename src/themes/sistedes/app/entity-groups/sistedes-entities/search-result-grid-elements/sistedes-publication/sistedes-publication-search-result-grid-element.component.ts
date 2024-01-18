@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { focusShadow } from '../../../../../../../app/shared/animations/focus';
-import { ViewMode } from '../../../../../../../app/core/shared/view-mode.model';
-import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
-import { SearchResultGridElementComponent } from '../../../../../../../app/shared/object-grid/search-result-grid-element/search-result-grid-element.component';
-import { Item } from '../../../../../../../app/core/shared/item.model';
-import { ItemSearchResult } from '../../../../../../../app/shared/object-collection/shared/item-search-result.model';
-import { getItemPageRoute } from '../../../../../../../app/item-page/item-page-routing-paths';
-import { DSONameService } from '../../../../../../../app/core/breadcrumbs/dso-name.service';
-import { TruncatableService } from '../../../../../../../app/shared/truncatable/truncatable.service';
-import { BitstreamDataService } from '../../../../../../../app/core/data/bitstream-data.service';
+import { focusShadow } from 'src/app/shared/animations/focus';
+import { ViewMode } from 'src/app/core/shared/view-mode.model';
+import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { SearchResultGridElementComponent } from 'src/app/shared/object-grid/search-result-grid-element/search-result-grid-element.component';
+import { Item } from 'src/app/core/shared/item.model';
+import { ItemSearchResult } from 'src/app/shared/object-collection/shared/item-search-result.model';
+import { getItemPageRoute } from 'src/app/item-page/item-page-routing-paths';
+import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
+import { TruncatableService } from 'src/app/shared/truncatable/truncatable.service';
+import { BitstreamDataService } from 'src/app/core/data/bitstream-data.service';
 
 @listableObjectComponent('ArtículoSearchResult', ViewMode.GridElement)
 @listableObjectComponent('ResumenSearchResult', ViewMode.GridElement)
@@ -17,7 +17,6 @@ import { BitstreamDataService } from '../../../../../../../app/core/data/bitstre
 @listableObjectComponent(ItemSearchResult, ViewMode.GridElement)
 @Component({
   selector: 'ds-sistedes-publication-search-result-grid-element',
-  styleUrls: ['./sistedes-publication-search-result-grid-element.component.scss'],
   templateUrl: './sistedes-publication-search-result-grid-element.component.html',
   animations: [focusShadow]
 })

@@ -22,7 +22,6 @@ import { DSpaceObjectType } from 'src/app/core/shared/dspace-object-type.model';
 @Component({
   selector: 'ds-highlighted-communities-list',
   templateUrl: './highlighted-communities-list.component.html',
-  styleUrls: ['./highlighted-communities-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     fadeIn,

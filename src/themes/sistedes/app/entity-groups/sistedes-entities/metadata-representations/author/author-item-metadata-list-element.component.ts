@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { metadataRepresentationComponent } from '../../../../../../../app/shared/metadata-representation/metadata-representation.decorator';
-import { MetadataRepresentationType } from '../../../../../../../app/core/shared/metadata-representation/metadata-representation.model';
-import { ItemMetadataRepresentationListElementComponent } from '../../../../../../../app/shared/object-list/metadata-representation-list-element/item/item-metadata-representation-list-element.component';
+import { metadataRepresentationComponent } from 'src/app/shared/metadata-representation/metadata-representation.decorator';
+import { MetadataRepresentationType } from 'src/app/core/shared/metadata-representation/metadata-representation.model';
+import { ItemMetadataRepresentationListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/item/item-metadata-representation-list-element.component';
 
 @metadataRepresentationComponent('Autor', MetadataRepresentationType.Item)
 @Component({

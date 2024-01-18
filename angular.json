@@ -31,7 +31,24 @@
               "jwt-decode",
               "uuid",
               "webfontloader",
-              "zone.js"
+              "zone.js",
+              "juice/client",
+              "mathjax-full/js/adaptors/liteAdaptor.js",
+              "mathjax-full/js/a11y/assistive-mml.js",
+              "mathjax-full/js/handlers/html.js",
+              "mathjax-full/js/input/tex.js",
+              "mathjax-full/js/input/tex/AllPackages.js",
+              "mathjax-full/js/mathjax.js",
+              "mathjax-full/js/output/svg.js",
+              "escape-string-regexp",
+              "htmlparser2",
+              "is-plain-object",
+              "parse-srcset",
+              "postcss",
+              "date-fns-tz",
+              "filesize",
+              "markdown-it-mathjax3",
+              "sanitize-html"
             ],
             "outputPath": "dist/browser",
             "index": "src/index.html",
@@ -49,11 +66,6 @@
                 "input": "src/styles/base-theme.scss",
                 "inject": false,
                 "bundleName": "base-theme"
-              },
-              {
-                "input": "src/themes/custom/styles/theme.scss",
-                "inject": false,
-                "bundleName": "custom-theme"
               },
               {
                 "input": "src/themes/dspace/styles/theme.scss",

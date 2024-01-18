@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ViewMode } from '../../../../../../../app/core/shared/view-mode.model';
-import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
-import { ItemComponent } from '../../../../../../../app/item-page/simple/item-types/shared/item.component';
+import { ViewMode } from 'src/app/core/shared/view-mode.model';
+import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { ItemComponent } from 'src/app/item-page/simple/item-types/shared/item.component';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { RouteService } from 'src/app/core/services/route.service';
 import { Router } from '@angular/router';
@@ -20,7 +20,6 @@ import { MetadataValue } from 'src/app/core/shared/metadata.models';
 @listableObjectComponent('Seminario', ViewMode.StandalonePage)
 @Component({
   selector: 'ds-sistedes-publication',
-  styleUrls: ['./sistedes-publication.component.scss'],
   templateUrl: './sistedes-publication.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

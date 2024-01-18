@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
-import { ViewMode } from '../../../../../../../app/core/shared/view-mode.model';
-import { ItemSearchResult } from '../../../../../../../app/shared/object-collection/shared/item-search-result.model';
-import { SearchResultListElementComponent } from '../../../../../../../app/shared/object-list/search-result-list-element/search-result-list-element.component';
-import { Item } from '../../../../../../../app/core/shared/item.model';
-import { getItemPageRoute } from '../../../../../../../app/item-page/item-page-routing-paths';
+import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { ViewMode } from 'src/app/core/shared/view-mode.model';
+import { ItemSearchResult } from 'src/app/shared/object-collection/shared/item-search-result.model';
+import { SearchResultListElementComponent } from 'src/app/shared/object-list/search-result-list-element/search-result-list-element.component';
+import { Item } from 'src/app/core/shared/item.model';
+import { getItemPageRoute } from 'src/app/item-page/item-page-routing-paths';
 
 @listableObjectComponent('ArtículoSearchResult', ViewMode.ListElement)
 @listableObjectComponent('ResumenSearchResult', ViewMode.ListElement)

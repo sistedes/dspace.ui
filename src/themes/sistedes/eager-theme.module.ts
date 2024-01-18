@@ -9,18 +9,8 @@ import { RootModule } from '../../app/root.module';
 import { NavbarModule } from '../../app/navbar/navbar.module';
 import { ItemPageModule } from '../../app/item-page/item-page.module';
 import { FooterComponent } from './app/footer/footer.component';
-import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
 import { ItemSharedModule } from '../../app/item-page/item-shared.module';
-import { CreateCollectionParentSelectorComponent } from './app/shared/dso-selector/modal-wrappers/create-collection-parent-selector/create-collection-parent-selector.component';
-import { CreateCommunityParentSelectorComponent } from './app/shared/dso-selector/modal-wrappers/create-community-parent-selector/create-community-parent-selector.component';
-import { CreateItemParentSelectorComponent } from './app/shared/dso-selector/modal-wrappers/create-item-parent-selector/create-item-parent-selector.component';
-import { EditCollectionSelectorComponent } from './app/shared/dso-selector/modal-wrappers/edit-collection-selector/edit-collection-selector.component';
-import { EditCommunitySelectorComponent } from './app/shared/dso-selector/modal-wrappers/edit-community-selector/edit-community-selector.component';
-import { EditItemSelectorComponent } from './app/shared/dso-selector/modal-wrappers/edit-item-selector/edit-item-selector.component';
 import { AboutComponent } from './app/info/about/about.component';
-import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
-import { CollectionListElementComponent} from './app/shared/object-list/collection-list-element/collection-list-element.component';
-import { CollectionDropdownComponent } from './app/shared/collection-dropdown/collection-dropdown.component';
 import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
@@ -47,7 +37,6 @@ import { AuthorsInfoComponent } from './app/info/authors-info/authors-info.compo
 const ENTRY_COMPONENTS = [
   AboutComponent,
   AuthorsInfoComponent,
-  UntypedItemComponent,
   SistedesPublicationComponent,
   SistedesPublicationListElementComponent,
   SistedesPublicationSearchResultListElementComponent,
@@ -60,9 +49,6 @@ const ENTRY_COMPONENTS = [
   AuthorSearchResultListElementComponent,
   AuthorSearchResultGridElementComponent,
   AuthorItemMetadataListElementComponent,
-  CommunityListElementComponent,
-  CollectionListElementComponent,
-  CollectionDropdownComponent,
   FileDownloadLinkComponent,
 ];
 
@@ -73,12 +59,6 @@ const DECLARATIONS = [
   HeaderNavbarWrapperComponent,
   NavbarComponent,
   FooterComponent,
-  CreateCollectionParentSelectorComponent,
-  CreateCommunityParentSelectorComponent,
-  CreateItemParentSelectorComponent,
-  EditCollectionSelectorComponent,
-  EditCommunitySelectorComponent,
-  EditItemSelectorComponent,
 ];
 
 @NgModule({

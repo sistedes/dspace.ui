@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme.module';
 import { SistedesEagerThemeModule } from './sistedes/eager-theme.module';
-// import { EagerThemeModule as CustomEagerThemeModule } from './custom/eager-theme.module';
 
 /**
  * This module bundles the eager theme modules for all available themes.
@@ -13,7 +12,6 @@ import { SistedesEagerThemeModule } from './sistedes/eager-theme.module';
 @NgModule({
   imports: [
     DSpaceEagerThemeModule,
-    // CustomEagerThemeModule,
     SistedesEagerThemeModule
   ],
 })

@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { ViewMode } from '../../../../../../../app/core/shared/view-mode.model';
-import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
-import { ItemComponent } from '../../../../../../../app/item-page/simple/item-types/shared/item.component';
+import { ViewMode } from 'src/app/core/shared/view-mode.model';
+import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { ItemComponent } from 'src/app/item-page/simple/item-types/shared/item.component';
 
 @listableObjectComponent('Autor', ViewMode.StandalonePage)
 @Component({
   selector: 'ds-author',
-  styleUrls: ['./author.component.scss'],
   templateUrl: './author.component.html'
 })
 /**

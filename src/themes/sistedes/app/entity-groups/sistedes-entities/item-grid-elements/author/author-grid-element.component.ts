@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { ViewMode } from '../../../../../../../app/core/shared/view-mode.model';
-import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
-import { AbstractListableElementComponent } from '../../../../../../../app/shared/object-collection/shared/object-collection-element/abstract-listable-element.component';
-import { Item } from '../../../../../../../app/core/shared/item.model';
+import { ViewMode } from 'src/app/core/shared/view-mode.model';
+import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { AbstractListableElementComponent } from 'src/app/shared/object-collection/shared/object-collection-element/abstract-listable-element.component';
+import { Item } from 'src/app/core/shared/item.model';
 
 @listableObjectComponent('Autor', ViewMode.GridElement)
 @Component({
   selector: 'ds-author-grid-element',
-  styleUrls: ['./author-grid-element.component.scss'],
   templateUrl: './author-grid-element.component.html',
 })
 /**
