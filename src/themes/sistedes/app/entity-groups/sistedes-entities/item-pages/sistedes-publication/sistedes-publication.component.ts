@@ -36,7 +36,7 @@ export class SistedesPublicationComponent extends ItemComponent {
 
   bibtexFile(): SafeResourceUrl {
     const blob = new Blob([this.getBibStrip()], { type: 'application/octet-stream' });
-    return this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
+    return this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(blob));
   }
 
   clickShowCite(): void {
