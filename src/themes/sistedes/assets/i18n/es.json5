@@ -125,7 +125,7 @@
   "item.page.filesection.other.bundle": "Otros",
   "item.page.is-part-of": "Publicado en",
   "item.page.license": "Licencia",
-  "item.page.related-items.view-less": "Ocultar los últimos {{ amount }}",
+  "item.page.related-items.view-less": "Ocultar los {{ amount }} últimos",
   "item.page.relationships.isAuthorOfAbstract": "Resúmenes",
   "item.page.relationships.isAuthorOfBulletin": "Boletines",
   "item.page.relationships.isAuthorOfPaper": "Artículos",
