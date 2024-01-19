@@ -13,12 +13,39 @@ import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
+import { AuthorComponent } from './app/entity-groups/sistedes-entities/item-pages/author/author.component';
+import { AuthorListElementComponent } from './app/entity-groups/sistedes-entities/item-list-elements/author/author-list-element.component';
+import { AuthorSearchResultListElementComponent } from './app/entity-groups/sistedes-entities/search-result-list-elements/author/author-search-result-list-element.component';
+import { AuthorGridElementComponent } from './app/entity-groups/sistedes-entities/item-grid-elements/author/author-grid-element.component';
+import { AuthorSearchResultGridElementComponent } from './app/entity-groups/sistedes-entities/search-result-grid-elements/author/author-search-result-grid-element.component';
+import { SistedesPublicationSearchResultListElementComponent } from './app/entity-groups/sistedes-entities/search-result-list-elements/sistedes-publication/sistedes-publication-search-result-list-element.component';
+import { SistedesPublicationListElementComponent } from './app/entity-groups/sistedes-entities/item-list-elements/sistedes-publication/sistedes-publication-list-element.component';
+import { SistedesPublicationSearchResultGridElementComponent } from './app/entity-groups/sistedes-entities/search-result-grid-elements/sistedes-publication/sistedes-publication-search-result-grid-element.component';
+import { ProceedingsPublicationSearchResultListElementComponent } from './app/entity-groups/sistedes-entities/search-result-list-elements/proceedings-publication/proceedings-publication-search-result-list-element.component';
+import { ProceedingsPublicationListElementComponent } from './app/entity-groups/sistedes-entities/item-list-elements/proceedings-publication/proceedings-publication-list-element.component';
+import { SistedesPublicationComponent } from './app/entity-groups/sistedes-entities/item-pages/sistedes-publication/sistedes-publication.component';
+import { AuthorItemMetadataListElementComponent } from './app/entity-groups/sistedes-entities/metadata-representations/author/author-item-metadata-list-element.component';
+
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
  */
 const ENTRY_COMPONENTS = [
+  AuthorItemMetadataListElementComponent,
+  SistedesPublicationComponent,
+  SistedesPublicationListElementComponent,
+  SistedesPublicationSearchResultListElementComponent,
+  SistedesPublicationSearchResultGridElementComponent,
+  ProceedingsPublicationListElementComponent,
+  ProceedingsPublicationSearchResultListElementComponent,
+  AuthorComponent,
+  AuthorListElementComponent,
+  AuthorGridElementComponent,
+  AuthorSearchResultListElementComponent,
+  AuthorSearchResultGridElementComponent,
+
+
 ];
 
 const DECLARATIONS = [
