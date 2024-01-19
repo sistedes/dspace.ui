@@ -67,7 +67,6 @@ import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-
 const DECLARATIONS = [
   AboutComponent,
   AuthorsInfoComponent,
-  ,
   FileSectionComponent,
   HomePageComponent,
   CommunityPageComponent,
