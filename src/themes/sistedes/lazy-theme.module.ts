@@ -59,9 +59,40 @@ import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-a
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import { FullFileSectionComponent } from './app/item-page/full/field-components/file-section/full-file-section.component';
 import { MediaViewerVideoComponent } from './app/item-page/media-viewer/media-viewer-video/media-viewer-video.component';
+import { AboutComponent } from './app/info/about/about.component';
+import { AuthorsInfoComponent } from './app/info/authors-info/authors-info.component';
 import { HighlightedCommunitiesListComponent } from './app/home-page/highlighted-communities-list/highlighted-communities-list.component';
+import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-download-link.component';
+import { AuthorComponent } from './app/entity-groups/sistedes-entities/item-pages/author/author.component';
+import { AuthorItemMetadataListElementComponent } from './app/entity-groups/sistedes-entities/metadata-representations/author/author-item-metadata-list-element.component';
+import { AuthorListElementComponent } from './app/entity-groups/sistedes-entities/item-list-elements/author/author-list-element.component';
+import { AuthorSearchResultListElementComponent } from './app/entity-groups/sistedes-entities/search-result-list-elements/author/author-search-result-list-element.component';
+import { AuthorGridElementComponent } from './app/entity-groups/sistedes-entities/item-grid-elements/author/author-grid-element.component';
+import { AuthorSearchResultGridElementComponent } from './app/entity-groups/sistedes-entities/search-result-grid-elements/author/author-search-result-grid-element.component';
+import { SistedesPublicationSearchResultListElementComponent } from './app/entity-groups/sistedes-entities/search-result-list-elements/sistedes-publication/sistedes-publication-search-result-list-element.component';
+import { SistedesPublicationListElementComponent } from './app/entity-groups/sistedes-entities/item-list-elements/sistedes-publication/sistedes-publication-list-element.component';
+import { SistedesPublicationSearchResultGridElementComponent } from './app/entity-groups/sistedes-entities/search-result-grid-elements/sistedes-publication/sistedes-publication-search-result-grid-element.component';
+import { ProceedingsPublicationSearchResultListElementComponent } from './app/entity-groups/sistedes-entities/search-result-list-elements/proceedings-publication/proceedings-publication-search-result-list-element.component';
+import { ProceedingsPublicationListElementComponent } from './app/entity-groups/sistedes-entities/item-list-elements/proceedings-publication/proceedings-publication-list-element.component';
+import { SistedesPublicationComponent } from './app/entity-groups/sistedes-entities/item-pages/sistedes-publication/sistedes-publication.component';
+
 
 const DECLARATIONS = [
+  AboutComponent,
+  AuthorsInfoComponent,
+  SistedesPublicationComponent,
+  SistedesPublicationListElementComponent,
+  SistedesPublicationSearchResultListElementComponent,
+  SistedesPublicationSearchResultGridElementComponent,
+  ProceedingsPublicationListElementComponent,
+  ProceedingsPublicationSearchResultListElementComponent,
+  AuthorComponent,
+  AuthorListElementComponent,
+  AuthorGridElementComponent,
+  AuthorSearchResultListElementComponent,
+  AuthorSearchResultGridElementComponent,
+  AuthorItemMetadataListElementComponent,
+  FileDownloadLinkComponent,
   FileSectionComponent,
   HomePageComponent,
   CommunityPageComponent,
