@@ -47,8 +47,8 @@ export class Citation {
             : this.item.allMetadataValues('dc.contributor.author'));
     }
 
-    getIsPartOf(): string {
-        return this.item.firstMetadataValue('dc.relation.ispartof');
+    getIsPartOf(): string[] {
+        return this.item.allMetadataValues('dc.relation.ispartof');
     }
 
     getPublisher(): string {
@@ -88,7 +88,7 @@ export class Citation {
         + this.getTitle() + '. '
         + 'In: '
         + ( this.getEditors().length > 0 ? ( this.getEditors().join(', ') + ' (ed' + (this.getEditors().length > 1 ? 's' : '') + '.)  ' ) : '' )
-        + this.getIsPartOf() + '. '
+        + this.getIsPartOf().join(', ') + '. '
         + this.getPublisher()
         + ' (' + this.getYear() + '). '
         + this.getUri();
@@ -102,7 +102,7 @@ export class Citation {
                url={${this.getUri()}},
                year={${this.getYear()}},
                publisher={${this.getPublisher()}},
-               booktitle={{${this.getIsPartOf()}}}
+               booktitle={{${this.getIsPartOf().join(', ')}}}
              }`.replace(/ {12}/g, ''));
     }
 }
@@ -123,7 +123,7 @@ export class ConferenceCitation extends Citation {
              }
 
              @proceedings{${this.getHandle().split('/')[0] + ':' + this.getConferenceAcronym() + ':' + this.getEditionYear()},
-               title={{${this.getIsPartOf()}}},
+               title={{${this.getIsPartOf().join(', ')}}},
                editor={${this.getEditors().join(' and ')}},
                year={${this.getEditionYear()}},
                publisher={${this.getPublisher()}},
