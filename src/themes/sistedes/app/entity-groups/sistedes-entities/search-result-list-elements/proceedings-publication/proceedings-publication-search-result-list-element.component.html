@@ -25,13 +25,16 @@
         <ds-truncatable-part [id]="dso.id" [minLines]="2">
           <span *ngIf="dso.allMetadata(['dc.contributor.author']).length > 0" class="item-list-authors">
             <span *ngFor="let author of allMetadataValues(['dc.contributor.author']); let last=last;">
-                <span [innerHTML]="author"><span [innerHTML]="author"></span></span>
+                <span [innerHTML]="author"></span>
                 <span *ngIf="!last">; </span>
               </span>
               <span>. </span>
           </span>
-          <ng-container *ngIf="dso.firstMetadataValue('dc.relation.ispartof') || dso.firstMetadataValue('dc.date.issued')">
-            <span *ngIf="dso.firstMetadataValue('dc.relation.ispartof')" class="item-list-ispartof" [innerHTML]="firstMetadataValue('dc.relation.ispartof') + ', '"></span>
+          <ng-container *ngIf="dso.allMetadata('dc.relation.ispartof').length > 0 || dso.firstMetadataValue('dc.date.issued')">
+            <span *ngFor="let ispartof of allMetadataValues(['dc.relation.ispartof']);">
+              <span [innerHTML]="ispartof"></span>
+              <span>, </span>
+            </span>
             <span *ngIf="dso.firstMetadataValue('dc.date.issued')" class="item-list-date" [innerHTML]="firstMetadataValue('dc.date.issued') + '.'"></span>
           </ng-container>
         </ds-truncatable-part>
