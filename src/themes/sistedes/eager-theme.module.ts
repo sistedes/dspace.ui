@@ -25,6 +25,7 @@ import { ProceedingsPublicationSearchResultListElementComponent } from './app/en
 import { ProceedingsPublicationListElementComponent } from './app/entity-groups/sistedes-entities/item-list-elements/proceedings-publication/proceedings-publication-list-element.component';
 import { SistedesPublicationComponent } from './app/entity-groups/sistedes-entities/item-pages/sistedes-publication/sistedes-publication.component';
 import { AuthorItemMetadataListElementComponent } from './app/entity-groups/sistedes-entities/metadata-representations/author/author-item-metadata-list-element.component';
+import { CollectionsWithParentComponent } from './app/item-page/field-components/collections/collections-with-parent.component';
 
 
 /**
@@ -44,7 +45,7 @@ const ENTRY_COMPONENTS = [
   AuthorGridElementComponent,
   AuthorSearchResultListElementComponent,
   AuthorSearchResultGridElementComponent,
-
+  CollectionsWithParentComponent
 
 ];
 
