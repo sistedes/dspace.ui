@@ -39,10 +39,14 @@
       [fields]="['dc.relation.ispartof']"
       [label]="'item.page.is-part-of'">
     </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
-      [fields]="['dc.rights.license']"
-      [label]="'item.page.license'">
-    </ds-generic-item-page-field>
+    <ds-item-page-cc-license-field [item]="object" [variant]="'small'">
+    </ds-item-page-cc-license-field>
+    <div *ngIf="object.firstMetadataValue('dc.rights.license') && !object.firstMetadataValue('dc.rights.uri')?.includes('creativecommons.org')">
+      <ds-generic-item-page-field [item]="object"
+        [fields]="['dc.rights']"
+        [label]="'item.page.license'">
+      </ds-generic-item-page-field>
+    </div>
   </div>
   <div class="col-xs-12 col-md-7">
     <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>

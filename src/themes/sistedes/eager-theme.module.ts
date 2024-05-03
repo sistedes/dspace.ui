@@ -26,6 +26,7 @@ import { ProceedingsPublicationListElementComponent } from './app/entity-groups/
 import { SistedesPublicationComponent } from './app/entity-groups/sistedes-entities/item-pages/sistedes-publication/sistedes-publication.component';
 import { AuthorItemMetadataListElementComponent } from './app/entity-groups/sistedes-entities/metadata-representations/author/author-item-metadata-list-element.component';
 import { CollectionsWithParentComponent } from './app/item-page/field-components/collections/collections-with-parent.component';
+import { ItemPageCcLicenseFieldComponent } from './app/item-page/simple/field-components/cc-license/item-page-cc-license-field.component';
 
 
 /**
@@ -45,8 +46,8 @@ const ENTRY_COMPONENTS = [
   AuthorGridElementComponent,
   AuthorSearchResultListElementComponent,
   AuthorSearchResultGridElementComponent,
-  CollectionsWithParentComponent
-
+  CollectionsWithParentComponent,
+  ItemPageCcLicenseFieldComponent,
 ];
 
 const DECLARATIONS = [

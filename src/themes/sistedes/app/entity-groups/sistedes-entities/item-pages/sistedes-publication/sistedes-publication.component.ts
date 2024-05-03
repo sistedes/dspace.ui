@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 import { Citation } from 'src/themes/sistedes/app/shared/citations/citation-util.module';
 import { MetadataValue } from 'src/app/core/shared/metadata.models';
 
-
 /**
  * Component that represents a conference publication Item page
  */
