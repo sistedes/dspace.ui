@@ -33,6 +33,7 @@ import { MetadataValue } from 'src/app/core/shared/metadata.models';
 import { MetadataUriValuesComponent } from 'src/app/item-page/field-components/metadata-uri-values/metadata-uri-values.component';
 import { Citation } from 'src/themes/sistedes/app/shared/citations/citation-util.module';
 import { CollectionsWithParentComponent } from 'src/themes/sistedes/app/item-page/field-components/collections/collections-with-parent.component';
+import { ItemPageCcLicenseFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/cc-license/item-page-cc-license-field.component';
 
 /**
  * Component that represents a conference publication Item page
@@ -70,6 +71,7 @@ import { CollectionsWithParentComponent } from 'src/themes/sistedes/app/item-pag
     AsyncPipe,TranslateModule,
     MetadataUriValuesComponent,
     CollectionsWithParentComponent,
+    ItemPageCcLicenseFieldComponent,
   ],
 })
 export class SistedesPublicationComponent extends ItemComponent {

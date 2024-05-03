@@ -25,6 +25,7 @@ import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/m
 import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
+import { ItemPageCcLicenseFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/cc-license/item-page-cc-license-field.component';
 
 /**
  * Component that represents an untyped Item page
@@ -56,6 +57,7 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
     RouterLink,
     ItemPageUriFieldComponent,
     ItemPageAbstractFieldComponent,
+    ItemPageCcLicenseFieldComponent,
   ],
 })
 export class UntypedItemComponent extends BaseComponent {
