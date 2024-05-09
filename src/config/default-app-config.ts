@@ -28,6 +28,10 @@ import { SuggestionConfig } from './suggestion-config.interfaces';
 import { ThemeConfig } from './theme.config';
 import { UIServerConfig } from './ui-server-config.interface';
 
+// BEGIN: Sistedes
+import { SistedesConfig } from 'src/themes/sistedes/sistedes-config.interface';
+// END: Sistedes
+
 export class DefaultAppConfig implements AppConfig {
   production = false;
 
@@ -586,4 +590,16 @@ export class DefaultAppConfig implements AppConfig {
       ],
     },
   ];
+  // BEGIN: Sistedes
+  sistedes: SistedesConfig = {
+    highlightedCommunities: {
+      // The number of items showing in highlighted communities components
+      pageSize:5,
+      // sort record of highlighted submissions
+      sortField: 'dc.title',
+      // Show communities whose title contains the current year
+      query:  'dc.title:' + new Date().getFullYear(),
+    },
+  };
+  // END: Sistedes
 }
