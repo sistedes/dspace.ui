@@ -21,6 +21,14 @@
       [fields]="['person.birthDate']"
       [label]="'person.page.birthdate'">
     </ds-generic-item-page-field>
+    <div *ngIf="object.firstMetadataValue('person.identifier.orcid') as orcid">
+      <ds-metadata-field-wrapper [label]="'person.page.orcid' | translate">
+        <a class="dont-break-out preserve-line-breaks ds-browse-link"
+            [href]="'https://orcid.org/' + orcid">
+          {{orcid}}
+        </a>
+      </ds-metadata-field-wrapper>
+    </div>
   </div>
   <div class="col-xs-12 col-md-9">
     <ds-related-items
