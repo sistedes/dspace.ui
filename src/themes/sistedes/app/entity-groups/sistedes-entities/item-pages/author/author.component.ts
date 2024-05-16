@@ -6,6 +6,7 @@ import { ItemComponent } from 'src/app/item-page/simple/item-types/shared/item.c
 @listableObjectComponent('Autor', ViewMode.StandalonePage)
 @Component({
   selector: 'ds-author',
+  styleUrls: ['./author.component.scss'],
   templateUrl: './author.component.html'
 })
 /**
