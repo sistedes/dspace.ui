@@ -41,7 +41,7 @@
     </ds-generic-item-page-field>
     <ds-item-page-cc-license-field [item]="object" [variant]="'small'">
     </ds-item-page-cc-license-field>
-    <div *ngIf="object.firstMetadataValue('dc.rights') && !object.firstMetadataValue('dc.rights.uri')?.includes('creativecommons.org')">
+    <div *ngIf="object.firstMetadataValue('dc.rights.license') && !object.firstMetadataValue('dc.rights.uri')?.includes('creativecommons.org')">
       <ds-generic-item-page-field [item]="object"
         [fields]="['dc.rights']"
         [label]="'item.page.license'">
