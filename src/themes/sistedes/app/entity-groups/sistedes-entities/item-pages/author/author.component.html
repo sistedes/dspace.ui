@@ -24,9 +24,8 @@
     <div *ngIf="object.firstMetadataValue('person.identifier.orcid') as orcid">
       <ds-metadata-field-wrapper [label]="'person.page.orcid' | translate">
         <a class="dont-break-out preserve-line-breaks ds-browse-link"
-            [href]="'https://orcid.org/' + orcid">
-          <img class="orcid-logo" alt="orcid-logo" src="/assets/images/orcid.logo.icon.svg"/> {{orcid}}
-        </a>
+            [href]="'https://orcid.org/' + orcid">{{orcid}}</a>
+        <img class="orcid-logo" alt="orcid-logo" src="/assets/images/orcid.logo.icon.svg"/>
       </ds-metadata-field-wrapper>
     </div>
   </div>
