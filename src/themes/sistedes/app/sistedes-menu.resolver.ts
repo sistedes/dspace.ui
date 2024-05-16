@@ -11,17 +11,30 @@ import { AuthorizationDataService } from '../../../app/core/data/feature-authori
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ScriptDataService } from '../../../app/core/data/processes/script-data.service';
 import { MenuResolver } from '../../../app/menu.resolver';
+import { TextMenuItemModel } from 'src/app/shared/menu/menu-item/models/text.model';
 
 const SISTEDES_MENUS = [
+  {
+    id: 'about-ellipsis',
+    active: false,
+    visible: true,
+    index: 2,
+    model: {
+      type: MenuItemType.TEXT,
+      text: 'menu.section.about-ellipsis',
+    } as TextMenuItemModel,
+  },
   {
     id: 'about',
     active: false,
     visible: true,
     index: 10,
+    parentID: 'about-ellipsis',
     model: {
       type: MenuItemType.LINK,
       text: 'menu.section.about',
-      link: '/about'
+      link: '/about',
+
     } as LinkMenuItemModel
   },
   {
@@ -29,6 +42,7 @@ const SISTEDES_MENUS = [
     active: false,
     visible: true,
     index: 10,
+    parentID: 'about-ellipsis',
     model: {
       type: MenuItemType.LINK,
       text: 'menu.section.authors-info',
