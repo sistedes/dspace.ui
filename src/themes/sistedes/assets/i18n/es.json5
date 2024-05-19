@@ -78,6 +78,7 @@
   "community.page.report-error": "Notificar un error en esta comunidad",
   "community.search.results.head": "Resultados de la búsqueda",
   "curation-task.task.filtermedia.label": "Filtrar medios",
+  "curation-task.task.fixjcis.label": "Arreglar nombre JCIS",
   "curation-task.task.makeadmin.label": "Hacer accesible sólo para administradores",
   "curation-task.task.makepublic.label": "Hacer público",
   "curation-task.task.renamemetadataattribute.label": "Renombrar atributo de metadatos",
