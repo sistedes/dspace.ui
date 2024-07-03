@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
 import { Item } from 'src/app/core/shared/item.model';
 import { ViewMode } from 'src/app/core/shared/view-mode.model';
 import { getItemPageRoute } from 'src/app/item-page/item-page-routing-paths';
-import { ThumbnailComponent } from 'src/app/thumbnail/thumbnail.component';
+import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
 import { ThemedBadgesComponent } from 'src/app/shared/object-collection/shared/badges/themed-badges.component';
 import { ItemSearchResult } from 'src/app/shared/object-collection/shared/item-search-result.model';
 import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
@@ -30,7 +30,7 @@ import { SearchResultListElementComponent } from 'src/app/shared/object-list/sea
     NgClass,
     NgFor,
     RouterLink,
-    ThumbnailComponent,
+    ThemedThumbnailComponent,
     ThemedBadgesComponent,
     TruncatableComponent,
     TruncatablePartComponent,

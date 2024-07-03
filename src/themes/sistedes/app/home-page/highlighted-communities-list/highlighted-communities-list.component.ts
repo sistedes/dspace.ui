@@ -39,7 +39,7 @@ import {
   fadeInOut,
 } from 'src/app/shared/animations/fade';
 import { ErrorComponent } from 'src/app/shared/error/error.component';
-import { LoadingComponent } from 'src/app/shared/loading/loading.component';
+import { ThemedLoadingComponent } from 'src/app/shared/loading/themed-loading.component';
 import { ListableObjectComponentLoaderComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object-component-loader.component';
 import { PaginationComponentOptions } from 'src/app/shared/pagination/pagination-component-options.model';
 import { PaginatedSearchOptions } from 'src/app/shared/search/models/paginated-search-options.model';
@@ -66,7 +66,7 @@ import { VarDirective } from 'src/app/shared/utils/var.directive';
     NgFor,
     ListableObjectComponentLoaderComponent,
     ErrorComponent,
-    LoadingComponent,
+    ThemedLoadingComponent,
     AsyncPipe,
     TranslateModule,
   ],

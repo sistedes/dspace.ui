@@ -22,7 +22,7 @@ import { ItemSearchResultListElementComponent } from 'src/app/shared/object-list
 import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.component';
 import { TruncatableService } from 'src/app/shared/truncatable/truncatable.service';
 import { TruncatablePartComponent } from 'src/app/shared/truncatable/truncatable-part/truncatable-part.component';
-import { ThumbnailComponent } from 'src/app/thumbnail/thumbnail.component';
+import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
 
 @listableObjectComponent('AutorSearchResult', ViewMode.ListElement)
 @Component({
@@ -34,7 +34,7 @@ import { ThumbnailComponent } from 'src/app/thumbnail/thumbnail.component';
     NgFor,
     NgClass,
     RouterLink,
-    ThumbnailComponent,
+    ThemedThumbnailComponent,
     ThemedBadgesComponent,
     TruncatableComponent,
     TruncatablePartComponent,
