@@ -1,0 +1,104 @@
+// DSpace works with CSS variables for its own components, and has a mapping of all bootstrap Sass
+// variables to CSS equivalents (see src/styles/_bootstrap_variables_mapping.scss). However Bootstrap
+// still uses Sass variables internally. So if you want to override Bootstrap (or other sass
+// variables) you can do so here. Their CSS counterparts will include the changes you make here.
+
+// When this file is going to be compiled, internal Bootstrap variables won't have been declared yet,
+// therefore if you want to use any Bootstrap variable you also need to declare it here.
+
+// All SASS variables from the base theme are also included here. Do not use the '!default' flag
+// here if you want to override them.
+
+
+/*** FONT FAMILIES ***/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+$font-family-sans-serif: 'Open Sans', Arial, Verdana, sans-serif;
+
+
+/*** SEMANTIC COLOR SCHEME ***/
+
+// Gray scale (uncomment the variables that you want to override or that you need to use in this file)
+//$white:    #fff;
+//$gray-100: #f8f9fa;
+//$gray-200: #e9ecef;
+//$gray-300: #dee2e6;
+//$gray-400: #ced4da;
+//$gray-500: #adb5bd;
+//$gray-600: #6c757d;
+//$gray-700: #495057;
+//$gray-800: #343a40;
+//$gray-900: #212529;
+//$black:    #000;
+
+// Other colors (uncomment the variables that you want to override or that you need to use in this file)
+//$blue:    #007bff !default;
+//$indigo:  #6610f2 !default;
+//$purple:  #6f42c1 !default;
+//$pink:    #e83e8c !default;
+//$red:     #dc3545 !default;
+//$orange:  #fd7e14 !default;
+//$yellow:  #ffc107 !default;
+//$green:   #28a745 !default;
+//$teal:    #20c997 !default;
+//$cyan:    #17a2b8 !default;
+
+// Define or override other colors here
+$blue: #069 !default;
+$green: #92C642 !default;
+$cyan: #207698 !default;
+$yellow: #ec9433 !default;
+$red: #CF4444 !default;
+$dark: #43515f !default;
+$gray-800: #343a40 !default;
+$gray-700: #495057 !default;
+$gray-400: #ced4da !default;
+$gray-100: #f8f9fa !default;
+
+// Override semantic colors here
+$primary:   $blue;
+$secondary: $gray-700;
+$success:   $green;
+$info:      $cyan;
+$warning:   $yellow;
+$danger:    $red;
+$light:     $gray-100;
+$dark:      $dark;
+// Add new semantic colors here (you don't need to add existing semantic colors)
+$theme-colors: (
+  // ...
+);
+
+
+/*** OTHER BOOTSTRAP VARIABLES ***/
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 170;
+
+$body-color: #343a40;       // As Bootstrap $gray-800
+
+$link-color: #1e6f90;       // Blue green, as DSpace $info
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+$table-accent-bg: #f8f9fa;  // As Bootstrap $gray-100
+$table-hover-bg: #ced4da;   // As Bootstrap $gray-400
+
+$navbar-dark-color: #fff;
+
+
+/*** CUSTOM DSPACE VARIABLES ***/
+
+$ds-home-news-link-color: #92c642;
+$ds-header-navbar-border-bottom-color: #92c642;
+
+/*** RESTORE BIGGER HEADERS ***/
+$font-size-base: 1rem !default;
+$h1-font-size:   $font-size-base * 2.5 !default;
+$h2-font-size:   $font-size-base * 2 !default;
+$h3-font-size:   $font-size-base * 1.75 !default;
+$h4-font-size:   $font-size-base * 1.5 !default;
+$h5-font-size:   $font-size-base * 1.25 !default;
+$h6-font-size:   $font-size-base * 1 !default;

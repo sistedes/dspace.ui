@@ -1,0 +1,19 @@
+@import 'src/styles/variables';
+
+::ng-deep ds-themed-comcol-page-handle > ds-comcol-page-handle {
+    font-weight: bold;
+    color: var(--bs-primary);
+}
+
+::ng-deep ds-themed-comcol-page-handle > ds-comcol-page-handle > * a {
+    font-weight: normal;
+}
+
+::ng-deep div.admin > ds-themed-comcol-page-handle > ds-comcol-page-handle > p {
+    margin-bottom: -0.1rem !important;
+    color: var(--bs-secondary) !important;
+}
+
+::ng-deep div.admin > ds-themed-comcol-page-handle > ds-comcol-page-handle > * a {
+    color: var(--bs-secondary) !important;
+}

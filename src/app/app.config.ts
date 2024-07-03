@@ -47,11 +47,13 @@ import {
   AppState,
   storeModuleConfig,
 } from './app.reducer';
+// BEGIN: Sistedes
+import { SISTEDES_APP_ROUTES as APP_ROUTES} from 'src/themes/sistedes/app/sistedes-routing';
 import {
-  APP_ROUTES,
   APP_ROUTING_CONF,
   APP_ROUTING_SCROLL_CONF,
 } from './app-routes';
+// END: Sistedes
 import { BROWSE_BY_DECORATOR_MAP } from './browse-by/browse-by-switcher/browse-by-decorator';
 import { AuthInterceptor } from './core/auth/auth.interceptor';
 import { LocaleInterceptor } from './core/locale/locale.interceptor';

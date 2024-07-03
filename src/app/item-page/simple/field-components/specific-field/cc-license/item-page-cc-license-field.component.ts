@@ -43,7 +43,7 @@ export class ItemPageCcLicenseFieldComponent implements OnInit {
    * Filed name containing the CC license name, as configured in the back-end, in the 'dspace.cfg' file, propertie
    * 'cc.license.name'
    */
-  @Input() ccLicenseNameField? = 'dc.rights';
+  @Input() ccLicenseNameField? = 'dc.rights.license';
 
   /**
    * Shows the CC license name with the image. Always show if image fails to load

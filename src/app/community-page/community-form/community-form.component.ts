@@ -81,6 +81,30 @@ export class CommunityFormComponent extends ComColFormComponent<Community> imple
         required: 'Please enter a name for this title',
       },
     }),
+    // BEGIN: Sistedes
+    new DynamicInputModel({
+      id: 'sistedesid',
+      name: 'dc.identifier.sistedes',
+      required: true,
+      validators: {
+        required: null,
+      },
+      errorMessages: {
+        required: 'Please enter a Sistedes identifier for this community',
+      },
+    }),
+    new DynamicInputModel({
+      id: 'date-issued',
+      name: 'dc.date.issued',
+      required: true,
+      validators: {
+        required: null,
+      },
+      errorMessages: {
+        required: 'Please enter a creation date for this community',
+      },
+    }),
+    // END: Sistedes
     new DynamicTextAreaModel({
       id: 'description',
       name: 'dc.description',
