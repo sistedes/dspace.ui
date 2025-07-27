@@ -37,6 +37,10 @@ import { SuggestionConfig } from './suggestion-config.interfaces';
 import { ThemeConfig } from './theme.config';
 import { UIServerConfig } from './ui-server-config.interface';
 
+// BEGIN: Sistedes
+import { SistedesConfig } from 'src/themes/sistedes/sistedes-config.interface';
+// END: Sistedes
+
 interface AppConfig extends Config {
   ui: UIServerConfig;
   rest: ServerConfig;
@@ -71,6 +75,9 @@ interface AppConfig extends Config {
   matomo?: MatomoConfig;
   geospatialMapViewer: GeospatialMapConfig;
   accessibility: AccessibilitySettingsConfig;
+  // BEGIN: Sistedes
+  sistedes: SistedesConfig;
+  // END: Sistedes
 }
 
 /**

@@ -33,6 +33,7 @@ import { StatisticsMenuProvider } from './shared/menu/providers/statistics.menu'
 import { SystemWideAlertMenuProvider } from './shared/menu/providers/system-wide-alert.menu';
 import { WithdrawnReinstateItemMenuProvider } from './shared/menu/providers/withdrawn-reinstate-item.menu';
 import { WorkflowMenuProvider } from './shared/menu/providers/workflow.menu';
+import { AboutMenuProvider } from 'src/themes/sistedes/app/shared/menu/providers/about.menu';
 
 /**
  * Represents and builds the menu structure for the three available menus (public navbar, admin sidebar and the dso edit
@@ -54,6 +55,9 @@ export const MENUS = buildMenuStructure({
   [MenuID.PUBLIC]: [
     CommunityListMenuProvider,
     BrowseMenuProvider,
+    // BEGIN: Sistedes
+    AboutMenuProvider,
+    // END: Sistedes
     StatisticsMenuProvider,
   ],
   [MenuID.ADMIN]: [

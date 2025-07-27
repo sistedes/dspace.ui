@@ -477,4 +477,13 @@ export const environment: BuildConfig = {
   accessibility: {
     cookieExpirationDuration: 7,
   },
+  // BEGIN: Sistedes
+  sistedes: {
+    highlightedCommunities: {
+      pageSize:5,
+      sortField: 'dc.title',
+      query:  'dc.title:' + new Date().getFullYear(),
+    }
+  }
+  // END: Sistedes
 };
