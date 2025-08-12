@@ -42,6 +42,7 @@
   "curation-task.task.renamemetadataattribute.label": "Renombrar atributo de metadatos",
   "curation-task.task.registerexternalhandle.label": "Registrar Handle externo",
   "curation-task.task.registerdoi.label": "Registro DOI",
+  "curation-task.task.refreshsistedesauthortitle.label": "Refrescar el campo título de los Autores",
   "dso-selector.set-scope.community.button": "Buscar en toda la biblioteca",
   "error.highlighted-communities": "Error al cargar las comunidades destacadas",
   "footer.copyright": "| Copyright © {{ year }}",
