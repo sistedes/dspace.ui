@@ -32,6 +32,9 @@ export class DSONameService {
    */
   private readonly factories = {
     // BEGIN: Sistedes
+    // Now a curation task is available that generates the 'dc.title' property.
+    // for all Sistedes Authors. This code may be removed in the future in favor
+    // of using such 'dc.title' property, which is the default behavior.
     Autor: (dso: DSpaceObject): string => {
       const familyName = dso.firstMetadataValue('person.familyName');
       const givenName = dso.firstMetadataValue('person.givenName');
