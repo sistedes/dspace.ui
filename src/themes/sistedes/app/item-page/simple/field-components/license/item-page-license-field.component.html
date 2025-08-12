@@ -3,7 +3,7 @@
     @if ((hasCcLicenseName$ | async) && (hasCcLicenseUri$ | async)) {
       <ds-item-page-cc-license-field [item]="item" [variant]="'small'" [showDisclaimer]="false"></ds-item-page-cc-license-field>
     } @else {
-      <ds-metadata-field-wrapper [label]="'item.page.license.title' | translate">
+      <ds-metadata-field-wrapper [label]="'item.page.license' | translate">
         @if (licenses.length === uris.length) {
           @for (license of licenses; track license; let last=$last; let i=$index) {
             <a [href]="uris[i]" target="_blank" class="license-link"><span class="license-text">{{ license }}</span></a>
