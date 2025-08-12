@@ -21,6 +21,8 @@ import { SearchResultGridElementComponent } from 'src/app/shared/object-grid/sea
 @listableObjectComponent('ResumenSearchResult', ViewMode.GridElement)
 @listableObjectComponent('PreliminaresSearchResult', ViewMode.GridElement)
 @listableObjectComponent('SeminarioSearchResult', ViewMode.GridElement)
+@listableObjectComponent('BoletínSearchResult', ViewMode.GridElement)
+@listableObjectComponent('ActaSearchResult', ViewMode.GridElement)
 @listableObjectComponent(ItemSearchResult, ViewMode.GridElement)
 @Component({
   selector: 'ds-sistedes-publication-search-result-grid-element',

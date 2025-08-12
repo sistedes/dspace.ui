@@ -14,6 +14,7 @@ import { SearchResultListElementComponent } from 'src/app/shared/object-list/sea
 
 @listableObjectComponent('SeminarioSearchResult', ViewMode.ListElement)
 @listableObjectComponent('BoletínSearchResult', ViewMode.ListElement)
+@listableObjectComponent('ActaSearchResult', ViewMode.ListElement)
 @Component({
   selector: 'ds-sistedes-publication-search-result-list-element',
   styleUrls: ['./sistedes-publication-search-result-list-element.component.scss'],

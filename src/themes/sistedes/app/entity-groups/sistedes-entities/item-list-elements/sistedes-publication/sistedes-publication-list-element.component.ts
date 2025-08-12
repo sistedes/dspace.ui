@@ -7,6 +7,7 @@ import { SistedesPublicationSearchResultListElementComponent } from '../../searc
 
 @listableObjectComponent('Seminario', ViewMode.ListElement)
 @listableObjectComponent('Boletín', ViewMode.ListElement)
+@listableObjectComponent('Acta', ViewMode.ListElement)
 @Component({
   selector: 'ds-sistedes-publication-list-element',
   templateUrl: './sistedes-publication-list-element.component.html',

@@ -38,8 +38,9 @@ import { ItemPageLicenseFieldComponent } from 'src/themes/sistedes/app/item-page
 @listableObjectComponent('Artículo', ViewMode.StandalonePage)
 @listableObjectComponent('Resumen', ViewMode.StandalonePage)
 @listableObjectComponent('Preliminares', ViewMode.StandalonePage)
-@listableObjectComponent('Boletín', ViewMode.StandalonePage)
 @listableObjectComponent('Seminario', ViewMode.StandalonePage)
+@listableObjectComponent('Boletín', ViewMode.StandalonePage)
+@listableObjectComponent('Acta', ViewMode.StandalonePage)
 @Component({
   selector: 'ds-sistedes-publication',
   templateUrl: './sistedes-publication.component.html',
