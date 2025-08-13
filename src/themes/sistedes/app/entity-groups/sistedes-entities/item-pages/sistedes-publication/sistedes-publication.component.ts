@@ -25,9 +25,7 @@ import { ThemedMetadataRepresentationListComponent } from 'src/app/item-page/sim
 import { RelatedItemsComponent } from 'src/app/item-page/simple/related-items/related-items-component';
 import { ItemComponent } from 'src/app/item-page/simple/item-types/shared/item.component';
 import { RouteService } from 'src/app/core/services/route.service';
-import { MetadataValue } from 'src/app/core/shared/metadata.models';
 import { MetadataUriValuesComponent } from 'src/app/item-page/field-components/metadata-uri-values/metadata-uri-values.component';
-import { Citation } from 'src/themes/sistedes/app/shared/citations/citation-util.module';
 import { CollectionsWithParentComponent } from 'src/themes/sistedes/app/item-page/field-components/collections/collections-with-parent.component';
 import { ItemPageLicenseFieldComponent } from 'src/themes/sistedes/app/item-page/simple/field-components/license/item-page-license-field.component';
 
@@ -68,12 +66,11 @@ import { ItemPageLicenseFieldComponent } from 'src/themes/sistedes/app/item-page
     TranslateModule,
     MetadataUriValuesComponent,
     CollectionsWithParentComponent,
-    ItemPageLicenseFieldComponent
+    ItemPageLicenseFieldComponent,
 ],
 })
 export class SistedesPublicationComponent extends ItemComponent {
 
-  citation: Citation = null;
   showCite = false;
   showBibtex = false;
 
@@ -97,31 +94,18 @@ export class SistedesPublicationComponent extends ItemComponent {
   }
 
   getBibId(): string {
-    return this.getCitation().getHandle().replace(/\//g,':');
+    return this.object.firstMetadataValue('dc.identifier.sistedes').replace(/\//g,':');
   }
 
   getBibFilename(): string {
-    return this.getCitation().getHandle().replace(/\//g,'-') + '.bib';
+    return this.object.firstMetadataValue('dc.identifier.sistedes').replace(/\//g,'-') + '.bib';
   }
 
   getCiteStrip(): string {
-    return this.getCitation().asTextCitation();
+    return this.object.firstMetadataValue('dc.identifier.citation');
   }
 
   getBibStrip(): string {
-    return this.getCitation().asBibTexCitation();
-  }
-
-  getUriMetadata(): MetadataValue[] {
-    let value = new MetadataValue();
-    value.value = this.getCitation().getUri();
-    return [ value ];
-  }
-
-  getCitation(): Citation {
-    if (this.citation == null) {
-      this.citation = Citation.from(this.object);
-    }
-    return this.citation;
+    return this.object.firstMetadataValue('dc.identifier.citation-bibtex');
   }
 }
