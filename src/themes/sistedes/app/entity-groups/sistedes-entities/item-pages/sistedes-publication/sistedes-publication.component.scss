@@ -1,20 +1,29 @@
 @import "src/app/shared/metadata-field-wrapper/metadata-field-wrapper.component.scss";
 @import "src/styles/_global-styles.scss";
 
-.tab-content {
-    padding-left: 1rem;
-}
-
 .nav-link {
     white-space: nowrap;
+    display: inline-block;
+    margin-right: 1.5rem;
 }
 
 .nav-link.active {
     background-color: var(--bs-body-bg);
     color: var(--bs-link-color);
+    /*
     border: var(--bs-border-width) solid var(--bs-primary);
     border-radius: var(--bs-border-radius);
+    */
 }
+
+.nav-link.active:after {
+    content: "▶";
+    scale: 75%;
+    text-align: right;
+    float: right;
+    margin-right: -1.5rem;
+}
+
 
 p {
     font-style: italic;
