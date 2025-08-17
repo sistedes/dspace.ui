@@ -30,6 +30,7 @@ import { FormComponent } from '../../shared/form/form.component';
 import { NotificationsService } from '../../shared/notifications/notifications.service';
 import { UploaderComponent } from '../../shared/upload/uploader/uploader.component';
 import { VarDirective } from '../../shared/utils/var.directive';
+import { DynamicDsDatePickerModel } from 'src/app/shared/form/builder/ds-dynamic-form-ui/models/date-picker/date-picker.model';
 
 /**
  * Form used for creating and editing communities
@@ -87,13 +88,11 @@ export class CommunityFormComponent extends ComColFormComponent<Community> imple
         required: 'Please enter a Sistedes identifier for this community',
       },
     }),
-    new DynamicInputModel({
+    new DynamicDsDatePickerModel({
       id: 'date-issued',
       name: 'dc.date.issued',
       required: true,
-      validators: {
-        required: null,
-      },
+      repeatable: true,
       errorMessages: {
         required: 'Please enter a creation date for this community',
       },
