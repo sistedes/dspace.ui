@@ -25,7 +25,7 @@ import { Community } from 'src/app/core/shared/community.model';
 @Component({
   selector: 'ds-themed-community-page',
   templateUrl: './community-page.component.html',
-  styleUrls: ['../../../../app/community-page/community-page.component.scss'],
+  styleUrls: ['./community-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut],
   standalone: true,

@@ -25,7 +25,7 @@ import { Collection } from 'src/app/core/shared/collection.model';
 @Component({
   selector: 'ds-themed-collection-page',
   templateUrl: './collection-page.component.html',
-  styleUrls: ['../../../../app/collection-page/collection-page.component.scss'],
+  styleUrls: ['./collection-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     fadeIn,

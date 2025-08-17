@@ -26,6 +26,7 @@
   "collection.form.sistedesid": "Identificador de Sistedes",
   "collection.form.errors.sistedesid": "Se requiere un identificador de Sistedes",
   "collection.page.browse.search.head": "Búsqueda avanzada",
+  "collection.page.handle": "URI permanente para esta colección:",
   "collection.page.handle.internal": "URI administrativa para esta colección:",
   "collection.page.report-error": "Notificar un error en esta colección",
   "community.form.date-issued": "Fecha de creación de la comunidad",
