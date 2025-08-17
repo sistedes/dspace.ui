@@ -20,7 +20,6 @@ import { DsoEditMenuComponent } from '../../../../app/shared/dso-page/dso-edit-m
 import { ErrorComponent } from '../../../../app/shared/error/error.component';
 import { ThemedLoadingComponent } from '../../../../app/shared/loading/themed-loading.component';
 import { VarDirective } from '../../../../app/shared/utils/var.directive';
-import { Community } from 'src/app/core/shared/community.model';
 
 @Component({
   selector: 'ds-themed-community-page',
@@ -46,8 +45,4 @@ import { Community } from 'src/app/core/shared/community.model';
   ],
 })
 export class CommunityPageComponent extends BaseComponent {
-  getPermanentUri(community: Community): string {
-    let sistedesId = community.firstMetadataValue('dc.identifier.sistedes');
-    return sistedesId ? 'https://hdl.handle.net/' + sistedesId : community.handle;
-  }
 }

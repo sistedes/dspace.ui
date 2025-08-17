@@ -20,8 +20,12 @@
                 </div>
               }
               <!-- Sistedes Handle -->
-              <ds-comcol-page-handle [content]="getPermanentUri(communityPayload)" [title]="'community.page.handle'" >
-              </ds-comcol-page-handle>
+              @if (communityPayload.firstMetadataValue('dc.identifier.sistedes'); as sistedesId) {
+                <ds-comcol-page-handle [content]="'https://hdl.handle.net/' + sistedesId" [title]="'community.page.handle'" >
+                </ds-comcol-page-handle>
+              } @else {
+                <div class="spacer"></div>
+              }
               <!-- Introductory text -->
               <ds-comcol-page-content [content]="communityPayload.introductoryText" [hasInnerHtml]="true">
               </ds-comcol-page-content>

@@ -20,7 +20,6 @@ import { DsoEditMenuComponent } from '../../../../app/shared/dso-page/dso-edit-m
 import { ErrorComponent } from '../../../../app/shared/error/error.component';
 import { ThemedLoadingComponent } from '../../../../app/shared/loading/themed-loading.component';
 import { VarDirective } from '../../../../app/shared/utils/var.directive';
-import { Collection } from 'src/app/core/shared/collection.model';
 
 @Component({
   selector: 'ds-themed-collection-page',
@@ -48,8 +47,4 @@ import { Collection } from 'src/app/core/shared/collection.model';
   ],
 })
 export class CollectionPageComponent extends BaseComponent {
-  getPermanentUri(collection: Collection): string {
-    let sistedesId = collection.firstMetadataValue('dc.identifier.sistedes');
-    return sistedesId ? 'https://hdl.handle.net/' + sistedesId : collection.handle;
-  }
 }

@@ -28,10 +28,14 @@
                   </div>
                 }
                 <!-- Sistedes Handle -->
-                <ds-comcol-page-handle
-                    [content]="getPermanentUri(collection)"
-                    [title]="'collection.page.handle'">
-                </ds-comcol-page-handle>
+                @if (collection.firstMetadataValue('dc.identifier.sistedes'); as sistedesId) {
+                  <ds-comcol-page-handle
+                    [content]="'https://hdl.handle.net/' + sistedesId"
+                    [title]="'collection.page.handle'" >
+                  </ds-comcol-page-handle>
+                } @else {
+                  <div class="spacer"></div>
+                }
                 <!-- Introductory text -->
                 <ds-comcol-page-content
                   [content]="collection.introductoryText"

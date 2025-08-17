@@ -1,5 +1,9 @@
 @import 'src/styles/variables';
 
+div.spacer {
+    margin-bottom: 1rem !important;
+}
+
 ::ng-deep ds-comcol-page-handle > ds-base-comcol-page-handle {
     font-weight: bold;
     color: var(--bs-primary);
@@ -10,7 +14,7 @@
 }
 
 ::ng-deep div.admin > ds-comcol-page-handle > ds-base-comcol-page-handle > p {
-    margin-bottom: -0.1rem !important;
+    margin-bottom: 0rem !important;
     color: var(--bs-secondary) !important;
 }
 
