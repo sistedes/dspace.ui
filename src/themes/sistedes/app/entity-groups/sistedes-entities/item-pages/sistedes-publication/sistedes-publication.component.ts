@@ -3,9 +3,9 @@ import {
   ChangeDetectionStrategy,
   Component,
 } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewMode } from 'src/app/core/shared/view-mode.model';
 import { DsoEditMenuComponent } from 'src/app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
 import { MetadataFieldWrapperComponent } from 'src/app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
@@ -24,7 +24,6 @@ import { ItemPageUriFieldComponent } from 'src/app/item-page/simple/field-compon
 import { ThemedMetadataRepresentationListComponent } from 'src/app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
 import { RelatedItemsComponent } from 'src/app/item-page/simple/related-items/related-items-component';
 import { ItemComponent } from 'src/app/item-page/simple/item-types/shared/item.component';
-import { RouteService } from 'src/app/core/services/route.service';
 import { MetadataUriValuesComponent } from 'src/app/item-page/field-components/metadata-uri-values/metadata-uri-values.component';
 import { CollectionsWithParentComponent } from 'src/themes/sistedes/app/item-page/field-components/collections/collections-with-parent.component';
 import { ItemPageLicenseFieldComponent } from 'src/themes/sistedes/app/item-page/simple/field-components/license/item-page-license-field.component';
@@ -42,6 +41,7 @@ import { ItemPageLicenseFieldComponent } from 'src/themes/sistedes/app/item-page
 @Component({
   selector: 'ds-sistedes-publication',
   templateUrl: './sistedes-publication.component.html',
+  styleUrls: [ './sistedes-publication.component.scss', ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [
@@ -67,45 +67,8 @@ import { ItemPageLicenseFieldComponent } from 'src/themes/sistedes/app/item-page
     MetadataUriValuesComponent,
     CollectionsWithParentComponent,
     ItemPageLicenseFieldComponent,
+    NgbNavModule,
 ],
 })
 export class SistedesPublicationComponent extends ItemComponent {
-
-  showCite = false;
-  showBibtex = false;
-
-  constructor(protected sanitizer: DomSanitizer, protected routeService: RouteService, protected router: Router) {
-    super(routeService, router);
-  }
-
-  bibtexFile(): SafeResourceUrl {
-    const blob = new Blob([this.getBibStrip()], { type: 'application/octet-stream' });
-    return this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(blob));
-  }
-
-  clickShowCite(): void {
-    this.showBibtex = false;
-    this.showCite = !this.showCite;
-  }
-
-  clickShowBibtex(): void {
-    this.showCite = false;
-    this.showBibtex = !this.showBibtex;
-  }
-
-  getBibId(): string {
-    return this.object.firstMetadataValue('dc.identifier.sistedes').replace(/\//g,':');
-  }
-
-  getBibFilename(): string {
-    return this.object.firstMetadataValue('dc.identifier.sistedes').replace(/\//g,'-') + '.bib';
-  }
-
-  getCiteStrip(): string {
-    return this.object.firstMetadataValue('dc.identifier.citation');
-  }
-
-  getBibStrip(): string {
-    return this.object.firstMetadataValue('dc.identifier.citation-bibtex');
-  }
 }
