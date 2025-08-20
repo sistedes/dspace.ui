@@ -97,7 +97,9 @@ export class BrowseByDateComponent extends BrowseByMetadataComponent implements 
       this.loading$ = of(false);
       return;
     }
-    const sortConfig = new SortOptions('default', SortDirection.ASC);
+    // BEGIN: Sistedes
+    const sortConfig = new SortOptions('default', SortDirection.DESC);
+    // END: Sistedes
     this.startsWithType = StartsWithType.date;
     this.currentPagination$ = this.paginationService.getCurrentPagination(this.paginationConfig.id, this.paginationConfig);
     this.currentSort$ = this.paginationService.getCurrentSort(this.paginationConfig.id, sortConfig);
