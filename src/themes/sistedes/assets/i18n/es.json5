@@ -107,6 +107,8 @@
   "relationships.Seminario.isAuthorOfSeminar.Autor": "Autores",
   "relationships.Autor.isPaperOfAuthor.Artículo": "Artículos",
   "relationships.Autor.isAbstractOfAuthor.Resumen": "Resúmenes",
+  "relationships.Autor.isBulletinOfAuthor.Boletín": "Boletines",
+  "relationships.Autor.isMinutesOfAuthor.Acta": "Actas",
   "relationships.Autor.isSeminarOfAuthor.Seminario": "Seminarios",
   "repository.title.prefix": "Biblioteca Digital Sistedes :: ",
   "repository.title": "Biblioteca Digital Sistedes",
