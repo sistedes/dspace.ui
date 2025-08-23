@@ -21,7 +21,7 @@
   @if (mdRepresentation.firstMetadata('person.identifier.orcid')) {
     <ds-orcid-badge-and-tooltip class="ms-1"
       [orcid]="mdRepresentation.firstMetadata('person.identifier.orcid')"
-      [authenticatedTimestamp]="mdRepresentation.firstMetadata('dspace.orcid.authenticated')">
+      [authenticatedTimestamp]="mdRepresentation.firstMetadata('dc.date.accessioned')">
     </ds-orcid-badge-and-tooltip>
   }
 </ds-truncatable>

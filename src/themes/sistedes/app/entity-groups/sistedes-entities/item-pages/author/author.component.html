@@ -29,7 +29,7 @@
             [href]="'https://orcid.org/' + orcid">{{orcid}}</a>
         <ds-orcid-badge-and-tooltip class="ms-1"
           [orcid]="object.firstMetadata('person.identifier.orcid')"
-          [authenticatedTimestamp]="object.firstMetadata('dspace.orcid.authenticated')">
+          [authenticatedTimestamp]="object.firstMetadata('dc.date.accessioned')">
         </ds-orcid-badge-and-tooltip>
       </ds-metadata-field-wrapper>
     }
