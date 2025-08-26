@@ -41,6 +41,7 @@
   "curation-task.task.makeadmin.label": "Hacer accesible sólo para administradores",
   "curation-task.task.makepublic.label": "Hacer público",
   "curation-task.task.renamemetadataattribute.label": "Renombrar atributo de metadatos",
+  "curation-task.task.deletemetadataattribute.label": "Eliminar atributo de metadatos",
   "curation-task.task.registerexternalhandle.label": "Registrar Handle externo",
   "curation-task.task.registerdoi.label": "Registro DOI",
   "curation-task.task.refreshsistedesauthortitle.label": "Refrescar el campo 'dc.title' de los Autores",
