@@ -25,7 +25,11 @@
 }
 
 .tab-content {
-    overflow-x: scroll;
+    overflow-x: auto;
+}
+
+.tab-pane {
+    overflow-x: auto;
 }
 
 p {
