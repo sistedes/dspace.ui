@@ -1,6 +1,12 @@
 @import "src/app/shared/metadata-field-wrapper/metadata-field-wrapper.component.scss";
 @import "src/styles/_global-styles.scss";
 
+.simple-view-element-contents {
+    @media screen and (min-width: map-get($grid-breakpoints, md)) {
+        display: flex;
+    }
+}
+
 .nav-link {
     white-space: nowrap;
     display: inline-block;
@@ -10,18 +16,25 @@
 .nav-link.active {
     background-color: var(--bs-body-bg) !important;
     color: var(--bs-link-color) !important;
-    /*
-    border: var(--bs-border-width) solid var(--bs-primary);
-    border-radius: var(--bs-border-radius);
-    */
 }
 
 .nav-link.active:after {
-    content: "▶";
+    @media screen and (max-width: map-get($grid-breakpoints, md)) {
+        content: "▼";
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, md)) {
+        content: "▶";
+    }
     scale: 75%;
     text-align: right;
     float: right;
     margin-right: -1.5rem;
+}
+
+div.nav-pills {
+    @media screen and (max-width: map-get($grid-breakpoints, md)) {
+        flex-direction: row !important;
+    }
 }
 
 .tab-content {
@@ -33,14 +46,18 @@
 }
 
 p {
+    @media screen and (min-width: map-get($grid-breakpoints, md)) {
+        border-left: var(--bs-border-width) solid var(--bs-border-color);
+    }
     font-style: italic;
-    border-left: var(--bs-border-width) solid var(--bs-border-color);
     padding-left: 1rem;
     margin-bottom: 0rem;
 }
 
 pre {
-    border-left: var(--bs-border-width) solid var(--bs-border-color);
+    @media screen and (min-width: map-get($grid-breakpoints, md)) {
+        border-left: var(--bs-border-width) solid var(--bs-border-color);
+    }
     padding-left: 1rem;
     margin-bottom: 0rem;
 }

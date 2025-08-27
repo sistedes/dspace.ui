@@ -82,7 +82,7 @@
     @if (object.firstMetadataValue('dc.identifier.citation*')) {
       <div class="simple-view-element">
         <h2 class="simple-view-element-header">{{ 'item.page.citation' | translate }}</h2>
-        <div class="d-flex">
+        <div class="simple-view-element-contents">
           <div ngbNav #nav="ngbNav" class="nav-pills" orientation="vertical">
             @if (object.firstMetadataValue('dc.identifier.citation'); as citation) {
               <ng-container ngbNavItem="1">
