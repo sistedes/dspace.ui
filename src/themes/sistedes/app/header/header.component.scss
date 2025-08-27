@@ -10,28 +10,17 @@
 
     &-container {
       min-height: var(--ds-header-height);
-      
-      /*
-        We specify these hardcoded values to allow the upper menu to fit the width
-        of the screen before the layout changes to the mobile one.
-        TODO: Check font sizes and max-width, and try to use standard measures (sm, md, lg, etc.)
-        Also change separation between elements rather than changing font-size
-      */
-      @media (max-width: 992px) {
+      flex-wrap: nowrap !important;
+      @include media-breakpoint-down(lg) {
         max-width: 100%;
       }
+    }
+  }
 
-      @media (max-width: 830px) {
-        font-size: 93%;
-      }
-
-      @media (max-width: 800px) {
-        font-size: 84%;
-      }
-
-      @media (max-width: 767px) {
-        font-size: 100%;
-      }
+  @include media-breakpoint-only(md) {
+    ::ng-deep #main-site-navigation {
+      column-gap: 0.2rem !important;
+      font-size: 95%;
     }
   }
 
