@@ -107,6 +107,8 @@
   "relationships.Artículo.isAuthorOfPaper.Autor": "Autores",
   "relationships.Resumen.isAuthorOfAbstract.Autor": "Autores",
   "relationships.Seminario.isAuthorOfSeminar.Autor": "Autores",
+  "relationships.Acta.isAuthorOfMinutes.Autor": "Autores",
+  "relationships.Boletín.isAuthorOfBulletin.Autor": "Autores",
   "relationships.Autor.isPaperOfAuthor.Artículo": "Artículos",
   "relationships.Autor.isAbstractOfAuthor.Resumen": "Resúmenes",
   "relationships.Autor.isBulletinOfAuthor.Boletín": "Boletines",
