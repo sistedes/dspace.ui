@@ -98,7 +98,9 @@ export class BrowseByDateComponent extends BrowseByMetadataComponent implements 
     this.startsWithType = StartsWithType.date;
 
     this.subs.push(
-      this.browseService.getConfiguredSortDirection(this.browseId, SortDirection.ASC).pipe(
+      // BEGIN: Sistedes
+      this.browseService.getConfiguredSortDirection(this.browseId, SortDirection.DESC).pipe(
+      // END: Sistedes
         map((sortDir) => new SortOptions(this.browseId, sortDir)),
         switchMap((sortConfig) => {
           this.currentPagination$ = this.paginationService.getCurrentPagination(this.paginationConfig.id, this.paginationConfig);

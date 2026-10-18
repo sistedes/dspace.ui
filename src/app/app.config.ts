@@ -60,7 +60,9 @@ import {
   storeModuleConfig,
 } from './app.reducer';
 import {
-  APP_ROUTES,
+  // BEGIN: Sistedes
+  // APP_ROUTES,
+  // END: Sistedes
   APP_ROUTING_CONF,
   APP_ROUTING_SCROLL_CONF,
 } from './app-routes';
@@ -75,6 +77,10 @@ import {
   WORKFLOW_TASK_OPTION_DECORATOR_MAP,
 } from './shared/mydspace-actions/claimed-task/switcher/claimed-task-actions-decorator';
 import { STARTS_WITH_DECORATOR_MAP } from './shared/starts-with/starts-with-decorator';
+
+// BEGIN: Sistedes
+import { SISTEDES_APP_ROUTES as APP_ROUTES } from 'src/themes/sistedes/app/sistedes-routes';
+// END: Sistedes
 
 export function getConfig() {
   return environment;

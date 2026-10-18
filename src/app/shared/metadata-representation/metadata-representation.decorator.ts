@@ -19,6 +19,9 @@ import { AuthorityLinkMetadataListElementComponent } from '../object-list/metada
 import { BrowseLinkMetadataListElementComponent } from '../object-list/metadata-representation-list-element/browse-link/browse-link-metadata-list-element.component';
 import { ItemMetadataListElementComponent } from '../object-list/metadata-representation-list-element/item/item-metadata-list-element.component';
 import { PlainTextMetadataListElementComponent } from '../object-list/metadata-representation-list-element/plain-text/plain-text-metadata-list-element.component';
+// BEGIN: Sistedes
+import { AuthorItemMetadataListElementComponent } from 'src/themes/sistedes/app/entity-groups/sistedes-entities/metadata-representations/author/author-item-metadata-list-element.component';
+// END: Sistedes
 
 export const METADATA_REPRESENTATION_COMPONENT_FACTORY = new InjectionToken<(entityType: string, mdRepresentationType: MetadataRepresentationType, context: Context, theme: string) => GenericConstructor<any>>('getMetadataRepresentationComponent', {
   providedIn: 'root',
@@ -30,6 +33,9 @@ export const DEFAULT_ENTITY_TYPE = 'Publication';
 export const DEFAULT_REPRESENTATION_TYPE = MetadataRepresentationType.PlainText;
 
 export type MetadataRepresentationComponent =
+  // BEGIN: Sistedes
+  typeof AuthorItemMetadataListElementComponent |
+  // END: Sistedes
   typeof BrowseLinkMetadataListElementComponent |
   typeof PlainTextMetadataListElementComponent |
   typeof ItemMetadataListElementComponent |
@@ -68,6 +74,12 @@ export const METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP =
       [MetadataRepresentationType.Item, new Map([
         [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, ProjectItemMetadataListElementComponent]])]])],
     ])],
+    // BEGIN: Sistedes
+    ['Autor', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, AuthorItemMetadataListElementComponent]])]])],
+    ])],
+    // END: Sistedes
   ]);
 /**
  * Decorator function to store metadata representation mapping

@@ -1,0 +1,22 @@
+
+<ng-container *ngVar="(itemRD$ | async) as itemRD">
+  @if (itemRD?.hasSucceeded && itemRD?.payload?.page.length > 0) {
+    <div class="mt-4" [ngClass]="placeholderFontClass" @fadeIn>
+      <div class="d-flex flex-row border-bottom mb-4 pb-4"></div>
+      <h2> {{'home.highlighted-communities.head' | translate}}</h2>
+      @for (item of itemRD?.payload?.page; track item) {
+        <div class="my-4">
+          <ds-listable-object-component-loader [object]="item" [viewMode]="viewMode" class="pb-4">
+          </ds-listable-object-component-loader>
+        </div>
+      }
+    </div>
+  }
+  @if (itemRD?.hasFailed) {
+    <ds-error message="{{'error.highlighted-communities' | translate}}"></ds-error>
+  }
+  @if (!itemRD || itemRD.isLoading) {
+    <ds-loading message="{{'loading.highlighted-communities' | translate}}">
+    </ds-loading>
+  }
+</ng-container>

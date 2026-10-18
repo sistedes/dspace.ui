@@ -1,0 +1,71 @@
+<div class="row">
+  @if (showThumbnails) {
+    <div class="col-3 col-md-2">
+      @if (linkType !== linkTypes.None) {
+        <a [target]="(linkType === linkTypes.ExternalLink) ? '_blank' : '_self'"
+          [attr.rel]="(linkType === linkTypes.ExternalLink) ? 'noopener noreferrer' : null"
+          [routerLink]="[itemPageRoute]" class="dont-break-out" tabindex="-1">
+          <ds-thumbnail [thumbnail]="dso?.thumbnail | async"
+            [defaultImage]="'assets/images/person-placeholder.svg'"
+            [alt]="'thumbnail.person.alt'"
+            [placeholder]="'thumbnail.person.placeholder'">
+          </ds-thumbnail>
+        </a>
+      }
+      @if (linkType === linkTypes.None) {
+        <span class="dont-break-out">
+          <ds-thumbnail [thumbnail]="dso?.thumbnail | async"
+            [defaultImage]="'assets/images/person-placeholder.svg'"
+            [alt]="'thumbnail.person.alt'"
+            [placeholder]="'thumbnail.person.placeholder'">
+          </ds-thumbnail>
+        </span>
+      }
+    </div>
+  }
+  <div [ngClass]="showThumbnails ? 'col-9 col-md-10' : 'col-12'">
+    @if (showLabel) {
+      <ds-badges [object]="dso" [context]="context"></ds-badges>
+    }
+    <ds-truncatable [id]="dso.id">
+      @if (linkType !== linkTypes.None) {
+        <a [target]="(linkType === linkTypes.ExternalLink) ? '_blank' : '_self'"
+          [attr.rel]="(linkType === linkTypes.ExternalLink) ? 'noopener noreferrer' : null"
+          [routerLink]="[itemPageRoute]" class="lead"
+           [dsMetadata]="dsoTitle" role="link" tabindex="0"></a>
+      }
+      @if (linkType === linkTypes.None) {
+        <span
+          class="lead"
+          [dsMetadata]="dsoTitle"></span>
+      }
+      <span class="text-muted">
+        <ds-truncatable-part [id]="dso.id" [minLines]="1">
+          @if (firstMetadata('person.givenName') || firstMetadata('person.familyName')) {
+            <span class="item-list-full-name" [dsMetadata]="firstMetadata('person.givenName')"></span>
+            <span>&nbsp;</span>
+            <span class="item-list-full-name" [dsMetadata]="firstMetadata('person.familyName')"></span>
+          }
+          @if (firstMetadataValue('person.email'); as email) {
+            &lt;<a class="dont-break-out preserve-line-breaks ds-browse-link" [href]="'mailto:' + email">{{email}}</a>&gt;
+          }
+        </ds-truncatable-part>
+        <ds-truncatable-part [id]="dso.id" [minLines]="1">
+          @if (firstMetadata('person.affiliation.name')) {
+            <span class="item-list-affiliation" [dsMetadata]="firstMetadata('person.affiliation.name')">.</span>
+          }
+        </ds-truncatable-part>
+        <ds-truncatable-part [id]="dso.id" [minLines]="1">
+          @if (firstMetadataValue('person.identifier.orcid'); as orcid) {
+            <a class="dont-break-out preserve-line-breaks ds-browse-link"
+              [href]="'https://orcid.org/' + orcid">{{orcid}}</a>
+            <ds-orcid-badge-and-tooltip class="ms-1"
+              [orcid]="firstMetadata('person.identifier.orcid')"
+              [authenticatedTimestamp]="firstMetadata('dc.date.accessioned')">
+            </ds-orcid-badge-and-tooltip>
+          }
+        </ds-truncatable-part>
+      </span>
+    </ds-truncatable>
+  </div>
+</div>

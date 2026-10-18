@@ -30,6 +30,7 @@ import { ComcolPageLogoComponent } from '../../shared/comcol/comcol-page-logo/co
 import { FormComponent } from '../../shared/form/form.component';
 import { UploaderComponent } from '../../shared/upload/uploader/uploader.component';
 import { VarDirective } from '../../shared/utils/var.directive';
+import { DynamicDsDatePickerModel } from 'src/app/shared/form/builder/ds-dynamic-form-ui/models/date-picker/date-picker.model';
 
 /**
  * Form used for creating and editing communities
@@ -74,6 +75,28 @@ export class CommunityFormComponent extends ComColFormComponent<Community> imple
         required: 'Please enter a name for this title',
       },
     }),
+    // BEGIN: Sistedes
+    new DynamicInputModel({
+      id: 'sistedesid',
+      name: 'dc.identifier.sistedes',
+      required: true,
+      validators: {
+        required: null,
+      },
+      errorMessages: {
+        required: 'Please enter a Sistedes identifier for this community',
+      },
+    }),
+    new DynamicDsDatePickerModel({
+      id: 'date-issued',
+      name: 'dc.date.issued',
+      required: true,
+      repeatable: true,
+      errorMessages: {
+        required: 'Please enter a creation date for this community',
+      },
+    }),
+    // END: Sistedes
     new DynamicTextAreaModel({
       id: 'description',
       name: 'dc.description',

@@ -641,4 +641,13 @@ export const environment: BuildConfig = {
       'dspace.cms.footer',
     ],
   },
+  // BEGIN: Sistedes
+  sistedes: {
+    highlightedCommunities: {
+      pageSize:5,
+      sortField: 'dc.title',
+      query:  'dc.title:' + new Date().getFullYear(),
+    }
+  }
+  // END: Sistedes
 };
