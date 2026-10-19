@@ -8,20 +8,19 @@ import {
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { getItemPageRoute } from '@dspace/core/router/utils/dso-route.utils';
+import { MetadataValueFilter } from '@dspace/core/shared/metadata.models';
+import { PLACEHOLDER_VALUE } from '@dspace/core/shared/metadata.utils';
 import { ItemSearchResult } from '@dspace/core/shared/object-collection/item-search-result.model';
 import { Item } from 'src/app/core/shared/item.model';
 import { ViewMode } from 'src/app/core/shared/view-mode.model';
+import { MetadataDirective } from 'src/app/shared/metadata.directive';
+import { MetadataLinkViewComponent } from 'src/app/shared/metadata-link-view/metadata-link-view.component';
 import { ThemedBadgesComponent } from 'src/app/shared/object-collection/shared/badges/themed-badges.component';
 import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
 import { SearchResultListElementComponent } from 'src/app/shared/object-list/search-result-list-element/search-result-list-element.component';
 import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.component';
 import { TruncatablePartComponent } from 'src/app/shared/truncatable/truncatable-part/truncatable-part.component';
 import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
-import { MetadataDirective } from 'src/app/shared/metadata.directive';
-import { MetadataLinkViewComponent } from 'src/app/shared/metadata-link-view/metadata-link-view.component';
-import { environment } from 'src/environments/environment';
-import { MetadataValueFilter } from '@dspace/core/shared/metadata.models';
-import { PLACEHOLDER_VALUE } from '@dspace/core/shared/metadata.utils';
 
 @listableObjectComponent('ArtículoSearchResult', ViewMode.ListElement)
 @listableObjectComponent('ResumenSearchResult', ViewMode.ListElement)

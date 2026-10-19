@@ -8,23 +8,22 @@ import {
   OnInit,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
-import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
-import { ViewMode } from 'src/app/core/shared/view-mode.model';
-import { ThemedBadgesComponent } from 'src/app/shared/object-collection/shared/badges/themed-badges.component';
-import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
-import { ItemSearchResultListElementComponent } from 'src/app/shared/object-list/search-result-list-element/item-search-result/item-types/item/item-search-result-list-element.component';
-import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.component';
-import { TruncatableService } from 'src/app/shared/truncatable/truncatable.service';
-import { TruncatablePartComponent } from 'src/app/shared/truncatable/truncatable-part/truncatable-part.component';
-import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
-
 import {
   APP_CONFIG,
   AppConfig,
 } from '@dspace/config/app-config.interface';
+import { TranslateModule } from '@ngx-translate/core';
+import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
+import { ViewMode } from 'src/app/core/shared/view-mode.model';
 import { MetadataDirective } from 'src/app/shared/metadata.directive';
+import { ThemedBadgesComponent } from 'src/app/shared/object-collection/shared/badges/themed-badges.component';
+import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { ItemSearchResultListElementComponent } from 'src/app/shared/object-list/search-result-list-element/item-search-result/item-types/item/item-search-result-list-element.component';
 import { OrcidBadgeAndTooltipComponent } from 'src/app/shared/orcid-badge-and-tooltip/orcid-badge-and-tooltip.component';
+import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.component';
+import { TruncatableService } from 'src/app/shared/truncatable/truncatable.service';
+import { TruncatablePartComponent } from 'src/app/shared/truncatable/truncatable-part/truncatable-part.component';
+import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
 
 @listableObjectComponent('AutorSearchResult', ViewMode.ListElement)
 @Component({

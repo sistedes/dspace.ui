@@ -23,6 +23,7 @@ import {
   TranslateModule,
   TranslateService,
 } from '@ngx-translate/core';
+import { DynamicDsDatePickerModel } from 'src/app/shared/form/builder/ds-dynamic-form-ui/models/date-picker/date-picker.model';
 
 import { environment } from '../../../environments/environment';
 import { ComColFormComponent } from '../../shared/comcol/comcol-forms/comcol-form/comcol-form.component';
@@ -30,7 +31,6 @@ import { ComcolPageLogoComponent } from '../../shared/comcol/comcol-page-logo/co
 import { FormComponent } from '../../shared/form/form.component';
 import { UploaderComponent } from '../../shared/upload/uploader/uploader.component';
 import { VarDirective } from '../../shared/utils/var.directive';
-import { DynamicDsDatePickerModel } from 'src/app/shared/form/builder/ds-dynamic-form-ui/models/date-picker/date-picker.model';
 
 /**
  * Form used for creating and editing communities

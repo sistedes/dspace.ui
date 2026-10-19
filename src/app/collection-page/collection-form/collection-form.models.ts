@@ -5,9 +5,9 @@ import {
   DynamicSelectModelConfig,
   DynamicTextAreaModel,
 } from '@ng-dynamic-forms/core';
+import { DynamicDsDatePickerModel } from 'src/app/shared/form/builder/ds-dynamic-form-ui/models/date-picker/date-picker.model';
 
 import { environment } from '../../../environments/environment';
-import { DynamicDsDatePickerModel } from 'src/app/shared/form/builder/ds-dynamic-form-ui/models/date-picker/date-picker.model';
 
 export const collectionFormEntityTypeSelectionConfig: DynamicSelectModelConfig<string> = {
   id: 'entityType',
@@ -62,15 +62,15 @@ export const collectionFormModels: DynamicFormControlModel[] = [
       required: 'Please enter a Sistedes identifier for this collection',
     },
   }),
-    new DynamicDsDatePickerModel({
-      id: 'date-issued',
-      name: 'dc.date.issued',
-      required: true,
-      repeatable: true,
-      errorMessages: {
-        required: 'Please enter a creation date for this collection',
-      },
-    }),
+  new DynamicDsDatePickerModel({
+    id: 'date-issued',
+    name: 'dc.date.issued',
+    required: true,
+    repeatable: true,
+    errorMessages: {
+      required: 'Please enter a creation date for this collection',
+    },
+  }),
   // END: Sistedes
   new DynamicTextAreaModel({
     id: 'description',

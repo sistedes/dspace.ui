@@ -13,6 +13,7 @@ import { BitstreamDataService } from 'src/app/core/data/bitstream-data.service';
 import { Item } from 'src/app/core/shared/item.model';
 import { ViewMode } from 'src/app/core/shared/view-mode.model';
 import { focusShadow } from 'src/app/shared/animations/focus';
+import { MetadataDirective } from 'src/app/shared/metadata.directive';
 import { ThemedBadgesComponent } from 'src/app/shared/object-collection/shared/badges/themed-badges.component';
 import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
 import { SearchResultGridElementComponent } from 'src/app/shared/object-grid/search-result-grid-element/search-result-grid-element.component';
@@ -20,7 +21,6 @@ import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.com
 import { TruncatableService } from 'src/app/shared/truncatable/truncatable.service';
 import { TruncatablePartComponent } from 'src/app/shared/truncatable/truncatable-part/truncatable-part.component';
 import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
-import { MetadataDirective } from 'src/app/shared/metadata.directive';
 
 @listableObjectComponent('ArtículoSearchResult', ViewMode.GridElement)
 @listableObjectComponent('ResumenSearchResult', ViewMode.GridElement)

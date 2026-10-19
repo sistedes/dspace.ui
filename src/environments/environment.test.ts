@@ -647,7 +647,7 @@ export const environment: BuildConfig = {
       pageSize:5,
       sortField: 'dc.title',
       query:  'dc.title:' + new Date().getFullYear(),
-    }
-  }
+    },
+  },
   // END: Sistedes
 };

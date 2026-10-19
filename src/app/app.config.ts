@@ -44,7 +44,10 @@ import {
 } from '@ngrx/store';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { provideEnvironmentNgxMask } from 'ngx-mask';
+// BEGIN: Sistedes
+import { SISTEDES_APP_ROUTES as APP_ROUTES } from 'src/themes/sistedes/app/sistedes-routes';
 
+// END: Sistedes
 import { environment } from '../environments/environment';
 import { HashedFileMapping } from '../modules/dynamic-hash/hashed-file-mapping';
 import { BrowserHashedFileMapping } from '../modules/dynamic-hash/hashed-file-mapping.browser';
@@ -60,9 +63,6 @@ import {
   storeModuleConfig,
 } from './app.reducer';
 import {
-  // BEGIN: Sistedes
-  // APP_ROUTES,
-  // END: Sistedes
   APP_ROUTING_CONF,
   APP_ROUTING_SCROLL_CONF,
 } from './app-routes';
@@ -78,9 +78,6 @@ import {
 } from './shared/mydspace-actions/claimed-task/switcher/claimed-task-actions-decorator';
 import { STARTS_WITH_DECORATOR_MAP } from './shared/starts-with/starts-with-decorator';
 
-// BEGIN: Sistedes
-import { SISTEDES_APP_ROUTES as APP_ROUTES } from 'src/themes/sistedes/app/sistedes-routes';
-// END: Sistedes
 
 export function getConfig() {
   return environment;

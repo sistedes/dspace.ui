@@ -1,5 +1,6 @@
 import { LayoutConfig } from '@dspace/config/layout-config.interfaces';
 import { SearchResultConfig } from '@dspace/config/search-result-config.interface';
+import { SistedesConfig } from 'src/themes/sistedes/sistedes-config.interface';
 
 import { AccessibilitySettingsConfig } from './accessibility-settings.config';
 import { ActuatorsConfig } from './actuators.config';
@@ -41,9 +42,6 @@ import { SuggestionConfig } from './suggestion-config.interfaces';
 import { ThemeConfig } from './theme.config';
 import { UIServerConfig } from './ui-server-config.interface';
 
-// BEGIN: Sistedes
-import { SistedesConfig } from 'src/themes/sistedes/sistedes-config.interface';
-// END: Sistedes
 
 export class DefaultAppConfig implements AppConfig {
   production = false;

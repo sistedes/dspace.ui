@@ -6,6 +6,7 @@ import {
   hasNoValue,
   hasValue,
 } from '@dspace/shared/utils/empty.util';
+import { AuthorItemMetadataListElementComponent } from 'src/themes/sistedes/app/entity-groups/sistedes-entities/metadata-representations/author/author-item-metadata-list-element.component';
 
 import { OrgUnitItemMetadataListElementComponent } from '../../entity-groups/research-entities/metadata-representations/org-unit/org-unit-item-metadata-list-element.component';
 import { PersonItemMetadataListElementComponent } from '../../entity-groups/research-entities/metadata-representations/person/person-item-metadata-list-element.component';
@@ -19,9 +20,6 @@ import { AuthorityLinkMetadataListElementComponent } from '../object-list/metada
 import { BrowseLinkMetadataListElementComponent } from '../object-list/metadata-representation-list-element/browse-link/browse-link-metadata-list-element.component';
 import { ItemMetadataListElementComponent } from '../object-list/metadata-representation-list-element/item/item-metadata-list-element.component';
 import { PlainTextMetadataListElementComponent } from '../object-list/metadata-representation-list-element/plain-text/plain-text-metadata-list-element.component';
-// BEGIN: Sistedes
-import { AuthorItemMetadataListElementComponent } from 'src/themes/sistedes/app/entity-groups/sistedes-entities/metadata-representations/author/author-item-metadata-list-element.component';
-// END: Sistedes
 
 export const METADATA_REPRESENTATION_COMPONENT_FACTORY = new InjectionToken<(entityType: string, mdRepresentationType: MetadataRepresentationType, context: Context, theme: string) => GenericConstructor<any>>('getMetadataRepresentationComponent', {
   providedIn: 'root',
