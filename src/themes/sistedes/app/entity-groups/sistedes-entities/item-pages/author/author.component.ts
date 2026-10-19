@@ -15,7 +15,7 @@ import { OrcidBadgeAndTooltipComponent } from 'src/app/shared/orcid-badge-and-to
 import { ThemedResultsBackButtonComponent } from 'src/app/shared/results-back-button/themed-results-back-button.component';
 import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
 
-@listableObjectComponent('Autor', ViewMode.StandalonePage)
+@listableObjectComponent('Author', ViewMode.StandalonePage)
 @Component({
   selector: 'ds-author',
   styleUrls: ['./author.component.scss'],

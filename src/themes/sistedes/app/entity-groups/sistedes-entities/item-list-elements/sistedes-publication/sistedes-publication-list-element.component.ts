@@ -6,9 +6,9 @@ import { AbstractListableElementComponent } from 'src/app/shared/object-collecti
 
 import { SistedesPublicationSearchResultListElementComponent } from '../../search-result-list-elements/sistedes-publication/sistedes-publication-search-result-list-element.component';
 
-@listableObjectComponent('Seminario', ViewMode.ListElement)
-@listableObjectComponent('Boletín', ViewMode.ListElement)
-@listableObjectComponent('Acta', ViewMode.ListElement)
+@listableObjectComponent('Seminar', ViewMode.ListElement)
+@listableObjectComponent('Bulletin', ViewMode.ListElement)
+@listableObjectComponent('Minutes', ViewMode.ListElement)
 @Component({
   selector: 'ds-sistedes-publication-list-element',
   templateUrl: './sistedes-publication-list-element.component.html',

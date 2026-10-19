@@ -22,12 +22,12 @@ import { TruncatableService } from 'src/app/shared/truncatable/truncatable.servi
 import { TruncatablePartComponent } from 'src/app/shared/truncatable/truncatable-part/truncatable-part.component';
 import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
 
-@listableObjectComponent('ArtículoSearchResult', ViewMode.GridElement)
-@listableObjectComponent('ResumenSearchResult', ViewMode.GridElement)
-@listableObjectComponent('PreliminaresSearchResult', ViewMode.GridElement)
-@listableObjectComponent('SeminarioSearchResult', ViewMode.GridElement)
-@listableObjectComponent('BoletínSearchResult', ViewMode.GridElement)
-@listableObjectComponent('ActaSearchResult', ViewMode.GridElement)
+@listableObjectComponent('PaperSearchResult', ViewMode.GridElement)
+@listableObjectComponent('AbstractSearchResult', ViewMode.GridElement)
+@listableObjectComponent('ParatextSearchResult', ViewMode.GridElement)
+@listableObjectComponent('SeminarSearchResult', ViewMode.GridElement)
+@listableObjectComponent('BulletinSearchResult', ViewMode.GridElement)
+@listableObjectComponent('MinutesSearchResult', ViewMode.GridElement)
 @listableObjectComponent(ItemSearchResult, ViewMode.GridElement)
 @Component({
   selector: 'ds-sistedes-publication-search-result-grid-element',

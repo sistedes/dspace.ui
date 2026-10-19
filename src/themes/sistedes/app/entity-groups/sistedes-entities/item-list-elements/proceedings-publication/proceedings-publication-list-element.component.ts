@@ -6,9 +6,9 @@ import { AbstractListableElementComponent } from 'src/app/shared/object-collecti
 
 import { ProceedingsPublicationSearchResultListElementComponent } from '../../search-result-list-elements/proceedings-publication/proceedings-publication-search-result-list-element.component';
 
-@listableObjectComponent('Artículo', ViewMode.ListElement)
-@listableObjectComponent('Resumen', ViewMode.ListElement)
-@listableObjectComponent('Preliminares', ViewMode.ListElement)
+@listableObjectComponent('Paper', ViewMode.ListElement)
+@listableObjectComponent('Abstract', ViewMode.ListElement)
+@listableObjectComponent('Paratext', ViewMode.ListElement)
 @Component({
   selector: 'ds-proceedings-publication-list-element',
   templateUrl: './proceedings-publication-list-element.component.html',

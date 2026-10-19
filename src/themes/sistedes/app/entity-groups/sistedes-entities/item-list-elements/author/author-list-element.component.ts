@@ -6,7 +6,7 @@ import { AbstractListableElementComponent } from 'src/app/shared/object-collecti
 
 import { AuthorSearchResultListElementComponent } from '../../search-result-list-elements/author/author-search-result-list-element.component';
 
-@listableObjectComponent('Autor', ViewMode.ListElement)
+@listableObjectComponent('Author', ViewMode.ListElement)
 @Component({
   selector: 'ds-author-list-element',
   templateUrl: './author-list-element.component.html',

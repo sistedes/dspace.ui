@@ -25,7 +25,7 @@ import { TruncatableService } from 'src/app/shared/truncatable/truncatable.servi
 import { TruncatablePartComponent } from 'src/app/shared/truncatable/truncatable-part/truncatable-part.component';
 import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
 
-@listableObjectComponent('AutorSearchResult', ViewMode.ListElement)
+@listableObjectComponent('AuthorSearchResult', ViewMode.ListElement)
 @Component({
   selector: 'ds-author-search-result-list-element',
   templateUrl: './author-search-result-list-element.component.html',

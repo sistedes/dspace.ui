@@ -36,12 +36,12 @@ import { CollectionsWithParentComponent } from 'src/themes/sistedes/app/item-pag
  * Component that represents a conference publication Item page
  */
 
-@listableObjectComponent('Artículo', ViewMode.StandalonePage)
-@listableObjectComponent('Resumen', ViewMode.StandalonePage)
-@listableObjectComponent('Preliminares', ViewMode.StandalonePage)
-@listableObjectComponent('Seminario', ViewMode.StandalonePage)
-@listableObjectComponent('Boletín', ViewMode.StandalonePage)
-@listableObjectComponent('Acta', ViewMode.StandalonePage)
+@listableObjectComponent('Paper', ViewMode.StandalonePage)
+@listableObjectComponent('Abstract', ViewMode.StandalonePage)
+@listableObjectComponent('Paratext', ViewMode.StandalonePage)
+@listableObjectComponent('Seminar', ViewMode.StandalonePage)
+@listableObjectComponent('Bulletin', ViewMode.StandalonePage)
+@listableObjectComponent('Minutes', ViewMode.StandalonePage)
 @Component({
   selector: 'ds-sistedes-publication',
   templateUrl: './sistedes-publication.component.html',

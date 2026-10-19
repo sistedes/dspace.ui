@@ -6,7 +6,7 @@ import { AbstractListableElementComponent } from 'src/app/shared/object-collecti
 
 import { AuthorSearchResultGridElementComponent } from '../../search-result-grid-elements/author/author-search-result-grid-element.component';
 
-@listableObjectComponent('Autor', ViewMode.GridElement)
+@listableObjectComponent('Author', ViewMode.GridElement)
 @Component({
   selector: 'ds-author-grid-element',
   templateUrl: './author-grid-element.component.html',

@@ -22,9 +22,9 @@ import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.com
 import { TruncatablePartComponent } from 'src/app/shared/truncatable/truncatable-part/truncatable-part.component';
 import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
 
-@listableObjectComponent('SeminarioSearchResult', ViewMode.ListElement)
-@listableObjectComponent('BoletínSearchResult', ViewMode.ListElement)
-@listableObjectComponent('ActaSearchResult', ViewMode.ListElement)
+@listableObjectComponent('SeminarSearchResult', ViewMode.ListElement)
+@listableObjectComponent('BulletinSearchResult', ViewMode.ListElement)
+@listableObjectComponent('MinutesSearchResult', ViewMode.ListElement)
 @Component({
   selector: 'ds-sistedes-publication-search-result-list-element',
   styleUrls: ['./sistedes-publication-search-result-list-element.component.scss'],

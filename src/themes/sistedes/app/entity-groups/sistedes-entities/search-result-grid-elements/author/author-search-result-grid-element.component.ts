@@ -12,7 +12,7 @@ import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.com
 import { TruncatablePartComponent } from 'src/app/shared/truncatable/truncatable-part/truncatable-part.component';
 import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
 
-@listableObjectComponent('AutorSearchResult', ViewMode.GridElement)
+@listableObjectComponent('AuthorSearchResult', ViewMode.GridElement)
 @Component({
   selector: 'ds-author-search-result-grid-element',
   templateUrl: './author-search-result-grid-element.component.html',

@@ -22,9 +22,9 @@ import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.com
 import { TruncatablePartComponent } from 'src/app/shared/truncatable/truncatable-part/truncatable-part.component';
 import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
 
-@listableObjectComponent('ArtículoSearchResult', ViewMode.ListElement)
-@listableObjectComponent('ResumenSearchResult', ViewMode.ListElement)
-@listableObjectComponent('PreliminaresSearchResult', ViewMode.ListElement)
+@listableObjectComponent('PaperSearchResult', ViewMode.ListElement)
+@listableObjectComponent('AbstractSearchResult', ViewMode.ListElement)
+@listableObjectComponent('ParatextSearchResult', ViewMode.ListElement)
 @Component({
   selector: 'ds-proceedings-publication-search-result-list-element',
   styleUrls: ['./proceedings-publication-search-result-list-element.component.scss'],
