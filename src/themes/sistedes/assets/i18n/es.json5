@@ -161,6 +161,7 @@
   "search.filters.entityType.Paper": "Artículo",
   "search.filters.entityType.Seminar": "Seminario",
   "search.form.scope.all": "Toda la biblioteca",
+  "search.sidebar.settings.rpp": "Resultados por página",
   "seminar.page.bio.prefix": "Acerca de ",
   "seminar.listelement.badge": "Seminario",
   "seminar.page.edit": "Editar este seminario",
