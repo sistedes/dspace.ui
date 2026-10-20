@@ -73,7 +73,7 @@ export const METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP =
         [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, ProjectItemMetadataListElementComponent]])]])],
     ])],
     // BEGIN: Sistedes
-    ['Autor', new Map([
+    ['Author', new Map([
       [MetadataRepresentationType.Item, new Map([
         [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, AuthorItemMetadataListElementComponent]])]])],
     ])],
