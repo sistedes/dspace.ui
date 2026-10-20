@@ -18,7 +18,7 @@
   <ds-dso-edit-menu></ds-dso-edit-menu>
 </div>
 <div class="row">
-  <div class="col-xs-12 col-md-4">
+  <div class="col-12 col-md-4">
     @if (!(mediaViewer.image || mediaViewer.video)) {
       <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
         <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
@@ -29,7 +29,9 @@
         <ds-media-viewer [item]="object"></ds-media-viewer>
       </div>
     }
-    <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+    @if (showDownloadLinkAsAttachment !== true) {
+      <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+    }
     <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
     <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
       [parentItem]="object"
@@ -48,20 +50,18 @@
     <ds-item-page-license-field [item]="object">
     </ds-item-page-license-field>
   </div>
-  <div class="col-xs-12 col-md-7">
+  <div class="col-12 col-md-7">
     <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.description']"
       [label]="'publication.page.description'">
     </ds-generic-item-page-field>
     @if (object.firstMetadataValue('dc.contributor.author'); as author) {
-      <div>
-        <ds-generic-item-page-field [item]="object"
-          [fields]="['dc.contributor.bio']"
-          [label]="('seminar.page.bio.prefix' | translate) + author"
-          [enableMarkdown]="true">
-        </ds-generic-item-page-field>
-      </div>
+      <ds-generic-item-page-field [item]="object"
+        [fields]="['dc.contributor.bio']"
+        [label]="('seminar.page.bio.prefix' | translate) + author"
+        [enableMarkdown]="true">
+      </ds-generic-item-page-field>
     }
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.subject']"
@@ -105,7 +105,9 @@
         </div>
       </div>
     }
-
+    @if (showDownloadLinkAsAttachment) {
+      <ds-item-page-attachment-section [item]="object"></ds-item-page-attachment-section>
+    }
     <div class="mt-4 mb-4">
       <div class="d-inline-block mt-2 me-2">
         <a class="btn btn-outline-primary text-nowrap" role="button" [routerLink]="[itemPageRoute + '/full']">

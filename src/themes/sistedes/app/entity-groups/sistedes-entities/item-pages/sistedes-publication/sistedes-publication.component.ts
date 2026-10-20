@@ -24,6 +24,7 @@ import { ItemPageLicenseFieldComponent } from 'src/app/item-page/simple/field-co
 import { ThemedItemPageTitleFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
 import { ItemComponent } from 'src/app/item-page/simple/item-types/shared/item.component';
 import { ThemedMetadataRepresentationListComponent } from 'src/app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
+import { AttachmentSectionComponent } from 'src/app/shared/bitstream-attachment/section/attachment-section.component';
 import { DsoEditMenuComponent } from 'src/app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
 import { MetadataFieldWrapperComponent } from 'src/app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
 import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
@@ -53,6 +54,7 @@ import { CollectionsWithParentComponent } from 'src/themes/sistedes/app/item-pag
     DsoEditMenuComponent,
     GenericItemPageFieldComponent,
     ItemPageAbstractFieldComponent,
+    AttachmentSectionComponent,
     ItemPageDateFieldComponent,
     ItemPageLicenseFieldComponent,
     MetadataFieldWrapperComponent,
