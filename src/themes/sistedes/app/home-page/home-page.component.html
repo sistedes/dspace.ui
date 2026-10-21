@@ -1,5 +1,23 @@
+@if (homeHeaderMetadataValue$ | async; as homeHeaderMetadataValue) {
+  <div class="home-header">
+    <div class="background-image-container mt-ncs">
+      <div class="container">
+        <div class="home-header-content py-4 px-2 py-sm-5 px-sm-0 mt-0 mb-4">
+          <div class="d-flex flex-wrap">
+            <ds-markdown-viewer [value]="homeHeaderMetadataValue"></ds-markdown-viewer>
+          </div>
+        </div>
+      </div>
+      <picture class="background-image">
+        <img alt="" [src]="'assets/sistedes/images/banner-home.jpg'"/>
+      </picture>
+    </div>
+  </div>
+}
+
 <ds-home-coar></ds-home-coar>
 <ds-home-news></ds-home-news>
+
 @if (showDiscoverFilters) {
   <ds-configuration-search-page
     [sideBarWidth]="3"

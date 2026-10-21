@@ -1,0 +1,93 @@
+@include media-breakpoint-down(md) {
+  ds-themed-configuration-search-page + .container {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.home-header ::ng-deep {
+  display: block;
+  color: white;
+  position: relative;
+
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: white !important;
+    font-weight: 300;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  a {
+    color: var(--ds-home-news-link-color);
+
+    &:hover {
+      color: var(--ds-home-news-link-hover-color);
+    }
+  }
+
+  p {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  .home-header-content {
+    background-color: transparent;
+    padding: 2em 0em;
+  }
+
+  .background-image > img {
+    background-color: var(--bs-info);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(50%);
+    opacity: 0.8;
+  }
+
+  .container {
+    position: relative;
+
+    &:before, &:after {
+      content: '';
+      display: block;
+      width: var(--ds-banner-background-gradient-width);
+      height: 100%;
+      top: 0;
+      position: absolute;
+    }
+
+    &:before {
+      background: linear-gradient(to left, var(--ds-banner-text-background), transparent);
+      left: calc(-1 * var(--ds-banner-background-gradient-width));
+
+    }
+
+    &:after {
+      background: linear-gradient(to right, var(--ds-banner-text-background), transparent);
+      right: calc(-1 * var(--ds-banner-background-gradient-width));
+    }
+
+    background-color: var(--ds-banner-text-background);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  h1 {
+    font-size: var(--bs-h2-font-size) !important;
+  } 
+  h2 {
+    font-size: var(--bs-h3-font-size) !important;
+  } 
+  p {
+    font-size: 100% !important;
+  }
+}
+
+
